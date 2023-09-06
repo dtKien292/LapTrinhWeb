@@ -1,0 +1,188 @@
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+}
+#head{
+    width: 100%;
+    height: 320px;
+}
+#head-pic{
+    height: 250px;
+    width: 100%;
+    background-color: rgb(13, 126, 175);
+    background-image: url(image/logodienthoaididong_02.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#head-tcc{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(233, 103, 32);
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(176, 176, 176);
+    position: sticky;
+    top: 250px;
+}
+#head-tcc a{
+    display: flex;
+    height: 90%;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: rgb(219, 246, 68);
+    text-decoration: none;
+}
+#head-tcc a:hover{
+    background-color: rgb(64, 255, 0);
+    color: black;
+    border: 1px solid black;
+}
+
+#poster{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#loai{
+    width: 50%;
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.loai-1{
+    background-color: rgb(255, 255, 255);
+    width: 47%;
+    height: 27%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.loai-1:hover{
+    width: 48%;
+    height: 28%;
+}
+.loai-1 img{
+    height: 85%;
+    width: auto;
+}
+.loai-1 a{
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(81, 90, 255);
+}
+#pic-poster{
+    width: 50%;
+    background-image: url(image/0130565iphone_7_plus.jpg);
+    background-size: 100% 100%;
+    margin: 10px;
+}
+
+.mathang{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.ten{
+    margin-top: 10px;
+    height: 50px;
+    background-color: rgb(230, 138, 0);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.ten b{
+    font-size: 20px;
+    color: black;
+}
+.sanpham{
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    padding: 10px;
+}
+.sp-1{
+    width: 30%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    border: 2px solid black;
+    padding-top: 5px;
+}
+.sp-1:hover{
+    width: 32%;
+    height: 97%;
+}
+.sp-1 img{
+    height: 60%;
+    width: 100%;
+    margin: 5px;
+}
+
+.tinhtrang{
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    color: black;
+    background-color: rgb(20, 255, 20);
+    font-size: 20px;
+}
+.tensp{
+    color: black;
+    font-size: 15px;
+}
+.gia{
+    color: rgb(255, 42, 0);
+    font-size: 15px;
+}
+
+#lienhe{
+    padding: 20px;
+    border-top: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.thongtin{
+    height: fit-content;
+    width: 30%;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.thongtin p{
+    background-color: greenyellow;
+    padding: 9px;
+}
+.thongtin b{
+    background-color: red;
+    color: antiquewhite;
+    padding: 5px;
+}

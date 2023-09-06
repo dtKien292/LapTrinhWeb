@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lấy chữ từ textarea</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <div id="dky">
+        <h1 style="color: blue;">Đăng ký vào danh sách email của chúng tôi</h1>
+        <div style="width: 100%; display: flex; flex-direction: row;">
+            <div id="hienthi">
+                <p>Nhập địa chỉ email: </p>
+                <p>Nhập lại địa chỉ email: </p>
+                <p>Chứ danh (tên gọi): </p>
+            </div>
+            <div id="nhap">
+                <input type="text" name="" id="em1">
+                <input type="text" name="" id="em2"> 
+                <input type="text" name="" id="name"> 
+                <button onclick="checkInputs()">Đăng ký</button>
+            </div>
+            <div id="thongbao">
+                <p class="textToChange-1">Thông tin này bắt buộc</p>
+                <p class="textToChange-2">Thông tin này bắt buộc</p>
+                <p class="textToChange-3">Thông tin này bắt buộc</p>
+            </div>
+        </div>
+    </div>
+    <div id="baitap"> 
+        <h1 style="color: blue; font-size: 20px;">Bài tập ngày 06/09/2023</h1>
+        <button onclick="back('baitap/kiemTraChanLe.html')" >Kiểm tra chẵn lẻ</button>
+        <button onclick="back('baitap/chuyenWeb.html')" >Chuyển trang Web</button>
+        <button onclick="back('baitap/bieuThuc.html')" >Tính biểu thức</button>
+        <button onclick="back('baitap/sapXepTen.html')" >Sắp xếp theo tên</button>
+    </div>
+    <script src="myScript.js"></script>
+</body>
+</html>

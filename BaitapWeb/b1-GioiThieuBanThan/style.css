@@ -1,0 +1,287 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  padding: 10px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-size: 100% 100%;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(238, 225, 153),white,white,white,white);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+p{
+  color: rgb(0, 0, 0);
+}
+h1{
+  font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+a{
+  text-decoration: none;
+}
+a:visited {
+color: rgb(72, 72, 72);
+background-color: transparent;
+text-decoration: none;
+}
+a:link {
+color: rgb(0, 0, 0);
+background-color: transparent;
+text-decoration: none;
+}
+a:hover{
+  color: rgb(0, 0, 0);
+background-color: transparent;
+text-decoration: none;
+}
+svg{
+  color: rgba(219, 219, 219, 0.835);
+  vertical-align: text-bottom;
+  height: 20px;
+  width: 20px;
+}
+
+#tuong{
+  height: 250px;
+  width: 1350px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-image: url("pic/bg-tuong.jpg");
+  border-radius: 15px;
+  background-size: 100%;
+}
+#buttom-chinhanh{
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  border-radius: 10px;
+  height: 40px;
+  width: 130px;
+  font-size: 10px;
+  background-color: rgb(180, 173, 173);
+  opacity: 0.8;
+  margin: 2px;
+  transition: 0.5s;
+}
+#buttom-chinhanh:hover{
+  height: 45px;
+  width: 135px;
+}
+#buttom-taoavt{
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  border-radius: 10px;
+  height: 35px;
+  width: 130px;
+  font-size: 10px;
+  background-color: rgb(180, 173, 173);
+  opacity: 0.8;
+  margin: 2px;
+  transition: 0.5s;
+}
+#buttom-taoavt:hover{
+  height: 40px;
+  width: 135px;
+}
+
+
+#thanhcongcu{
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  width: 1250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-bottom: 2px solid rgb(180, 173, 173);
+  padding-bottom: 20px;
+}
+#avt{
+  position: absolute;
+  top: -80px;
+  left: 20px;
+  height: 150px;
+  width: 150px;
+  border-radius: 200px;
+  border: 5px solid rgb(255, 255, 255)
+}
+#cam-icon{
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  position: absolute;
+  left: 120px;
+  bottom: 15px;
+  height: 25px;
+  width: 25px;
+  border-radius: 20px;
+  background-color: rgb(144, 144, 144);
+}
+#ten{
+  position: absolute;
+  left: 160px;
+  top : 90px;
+  height: auto;
+  width: 200px;
+}
+#themvaotin{
+  position: absolute;
+  right: 235px;
+  top : 30px;
+  height: 35px;
+  width: fit-content;
+  background-color:rgb(73, 134, 255);
+  border-radius: 5px;
+  border: 2px ;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  padding: 10px;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+#themvaotin:hover{
+  height: 40px;
+  width: fit-content;
+}
+#chinhsuacanhan{
+  position: absolute;
+  right: 1px;
+  top : 30px;
+  height: 35px;
+  width: fit-content;
+  background-color:rgb(223, 221, 221) ;
+  border-radius: 5px;
+  border: 2px ;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  padding: 10px;
+  transition: 0.5s;
+}
+#chinhsuacanhan:hover{
+  height: 40px;
+  width: fit-content;
+}
+
+#tuychon{
+  height: 65px;
+  width: 1250px;
+  background-color: rgb(254, 254, 254);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#tuychon-left{
+  height: 65px;
+  width: 50%;
+  background-color: rgb(254, 254, 254);
+  display: flex;
+}
+
+#tuychon-right{
+  height: 0px;
+  width:50px;
+  background-color: rgb(189, 189, 189);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  transition: 0.5s;
+}
+#tuychon-right:hover{
+  height: 45px;
+}
+
+.tc-button{
+  background-color:rgb(255, 255, 255);
+  height: 65px;
+  padding: 0 10px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  color: rgb(91, 91, 91);
+  transition: 0.3s;
+}
+.tc-button:hover{
+  background-color: rgba(207, 207, 207, 0.835);
+  border-radius: 5px;
+}
+
+#baiviet{
+  background-color: #d0d0d0;
+  height:700px;
+  width: 1670px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 10px;
+}
+#thegioithieu{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-right: 10px;
+  background-color: rgb(255, 255, 255);
+  height: 450px;
+  width: 490px;
+  border-radius: 10px;
+}
+#thongtin{
+  background-color: rgb(255, 255, 255);
+  height: 270px;
+  width: 85%;
+  top: 130px;
+  position: absolute;
+  line-height: 35px;
+  font-size: 15px;
+}
+#music{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  background-color: #d0d0d0;
+  height: 60px;
+  width: 80%;
+  border-radius: 10px;
+  margin-left: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#media{
+  background-color: rgb(255, 255, 255);
+  height: 450px;
+  width: 750px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  padding: 10px;
+}
+.pic {
+  width: 30%;
+  height: 95%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sắp xếp danh sách tên</title>
+</head>
+<body>
+    <h1>Danh sách tên sau khi sắp xếp :</h1>
+    <ul id="nameList" style="font-size: 30px;"></ul>
+  <script>
+    var nameInput = window.prompt("Nhập vào một danh: ", "")
+      const namesInput = nameInput.toLowerCase();
+      const namesArray = namesInput.split(" "); // Tách chuỗi thành mảng các tên
+
+      namesArray.sort(); // Sắp xếp mảng các tên theo thứ tự tăng dần
+
+      const nameList = document.getElementById("nameList");
+      nameList.innerHTML = ""; // Xóa danh sách tên hiện tại
+
+      namesArray.forEach(function(name) {
+        const listItem = document.createElement("li");
+        listItem.textContent = name;
+        nameList.appendChild(listItem); // Thêm từng tên vào danh sách
+      });
+  </script>
+</body>
+</html>
