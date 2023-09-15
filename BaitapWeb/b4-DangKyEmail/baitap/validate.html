@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      .error-message {
+        color: red;
+        display: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body style="display: flex; justify-content: center">
+    <div style="border: 2px solid blue; padding: 40px">
+      <h2
+        style="
+          font-weight: bold;
+          font-size: 30px;
+          margin-block-start: 0;
+          margin-block-end: 0;
+          margin-bottom: 30px;
+          color: blue;
+        "
+      >
+        Đăng ký một tài khoản mới
+      </h2>
+      <form
+        id="registration-form"
+        style="display: flex; flex-direction: column; gap: 10px"
+        onsubmit="return validateForm()"
+        action="./success.html"
+        method="get"
+      >
+        <div style="display: flex; align-items: center">
+          <label for="email" style="width: 150px">Địa chỉ Email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            style="width: 140px"
+          
+          />
+        </div>
+
+        <div style="display: flex; align-items: center">
+          <label for="confirm-email" style="width: 150px">Số điện thoại</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            style="width: 140px"
+          
+          />
+        </div>
+        <div style="display: flex; align-items: center">
+          <label for="kv" style="width: 150px">Khu vực</label>
+          <select name="kv" id="kv" style="width: 140px;">
+            <option value="" selected>Lựa chọn</option>
+            <option value="mb">Miền bắc</option>
+            <option value="mt">Miền trung</option>
+            <option value="mn">Miền nam</option>
+          </select>
+        </div>
+        <div>
+            <label for="">Liên lạc với tôi thông qua:</label>
+            <div style="display: inline-block;">
+              <label for="message"><input type="radio" id="message" name="contact" value="message">Tin nhắn</label>
+              <label for="emailc"><input type="radio" id="emailc" name="contact" value="email">Email</label>
+              <label for="phonec"><input type="radio" id="phonec" name="contact" value="phone">Điện thoại</label>
+              <label for="none"><input type="radio" id="none" name="contact" value="none">Không liên lạc</label>
+            </div>
+            
+        </div>
+        <div>
+            <label for="acc">Đồng ý với các quy định:</label>
+            <input type="checkbox" name="acc" id="acc">Tôi đồng ý</input>
+        </div>
+        <div style="display: flex; gap: 30px; justify-content: end;">
+            <label for="message">Bình luận</label>
+            <textarea id="cmt" rows="4" cols="30"></textarea>
+        </div>
+
+        <div>
+          <button type="submit">Đăng kí</button>
+          <button type="button" onclick="resetForm()">Xóa</button>
+        </div>
+      </form>
+
+      <div id="validate">
+        
+      </div>
+    </div>
+
+    <script>
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+       function validateForm() {
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const kv = document.getElementById("kv").value;
+      const contact = document.querySelector("input[name='contact']:checked");
+      const acc = document.getElementById("acc").checked;
+      const message = document.getElementById("cmt").value;
+
+      const validateDiv = document.getElementById("validate");
+      validateDiv.innerHTML = "";
+
+      let erroeMes=[];
+      let isErr=false;
+      if (!email||!emailRegex.test(email)) {
+        erroeMes.push({title:"Email",err:"Địa chỉ Email không hợp lệ.",e:true});
+        isErr=true;
+      }else erroeMes.push({title:"Email",err:email})
+      if (!phone) {
+        erroeMes.push({title:"Số điện thoại:",err:"Số điện thoại không hợp lệ.",e:true});
+        isErr=true;
+      }else erroeMes.push({title:"Số điện thoại",err:phone})
+      if (kv === "") {
+        erroeMes.push({title:"Khu vực",err:"Vui lòng chọn khu vực",e:true});
+        isErr=true;
+      }else erroeMes.push({title:"Khu vực",err:kv})
+      if (!acc) {
+        erroeMes.push({title:"Đồng ý với các quy định",err:"Bạn cần đồng ý với các quy định",e:true});
+        isErr=true;
+      }
+      if (!contact) {
+        erroeMes.push({title:"Liên lạc",err:"Vui lòng chọn phương thức liên lạc",e:true});
+        isErr=true;
+      }else   erroeMes.push({title:"Liên lạc",err:contact});
+      erroeMes.push({title:"Bình luận",err:message.length+"kí tự"});
+    
+      
+      if(isErr){
+        showError(erroeMes);
+        return false; 
+
+      }
+      return true;
+    }
+
+    function showError(message) {
+      const validateDiv = document.getElementById("validate");
+      validateDiv.style.display = "block";
+      let contentHtml="";
+      contentHtml+=" <p style='font-weight:600;font-size:32px'>Hãy xem xét lại thông tin đã nhập</p>"
+        message.forEach((value)=>{
+          contentHtml+=`<div style="display:flex;gap:10px;align-items:center ">
+            <p>${value.title}</p>
+            <p style='${value.e===true?"color:red":""}'>${value.err}</p>
+            </div>`
+           
+        });
+      validateDiv.innerHTML += contentHtml;
+    }
+
+      function resetForm() {
+        document.getElementById("registration-form").reset();
+        document.getElementById("validate").innerHTML = "";
+        const validateDiv = document.getElementById("validate");
+        validateDiv.style.display = "none";
+      }
+
+     
+    </script>
+  </body>
+</html>
