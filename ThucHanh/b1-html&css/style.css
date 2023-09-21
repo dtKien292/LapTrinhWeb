@@ -1,0 +1,125 @@
+body {
+    background-image: linear-gradient(to right, rgb(181, 153, 205), rgb(255, 205, 112));  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("pic/image-lion-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500px;
+    z-index: -1;
+}
+
+#head{
+    background-image: url(pic/logo-roar-bikes.png);
+    background-repeat: no-repeat;
+    background-position: 0cqi;
+    padding: 5px;;
+    height: 100px;
+    width: 900px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+#head a{
+    border: 2px solid white;
+    margin: 10px;
+    padding: 5px 10px;
+    height: fit-content;   
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu li {
+    padding: 10px;
+}
+.dropdown-menu li:hover {
+    background-color: #ddd;
+}
+
+#body{
+    height: fit-content;
+    width: 900px;
+}
+#body_1{
+    width: 100%;
+    height: fit-content;
+    background-image: url(pic/image-bike-repair-service.jpg);
+    background-repeat: no-repeat;
+    background-size: 250px;
+    background-position: right;
+}
+#body_1 p{
+    color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+#body_2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#body_2 div{
+    height: 250px;
+    width: 270px;
+    box-shadow: 0 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#body_2 svg{
+    height:100px;
+    color: #ffffff;
+}
+.card h1{
+    color: white;
+    margin: 0px;
+}
+.card p{
+    color: white;
+}
+
+#cmt{
+    height: 300px;
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cmt1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%; 
+    height: 38%;
+    border: 2px solid white;
+    margin: 20px;
+    padding: 15px;
+}
+.cmt1 p{
+    color: white;
+    font-size: 18px;
+    margin: 0px;
+}
