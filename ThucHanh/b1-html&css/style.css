@@ -35,27 +35,8 @@ body::before {
     padding: 5px 10px;
     height: fit-content;   
 }
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-.dropdown-menu li {
-    padding: 10px;
-}
-.dropdown-menu li:hover {
-    background-color: #ddd;
+#head a:hover{
+    color: red;
 }
 
 #body{
