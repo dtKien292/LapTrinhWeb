@@ -38,6 +38,16 @@ body::before {
 #head a:hover{
     color: red;
 }
+.dropdown-menu {
+    display: none;
+  }
+  
+  .dropdown:hover + .dropdown-menu {
+    display: block;
+  }
+#head li{
+    margin: 10px;
+}
 
 #body{
     height: fit-content;
