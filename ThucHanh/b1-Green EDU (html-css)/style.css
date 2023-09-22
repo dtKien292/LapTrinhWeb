@@ -1,0 +1,85 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+#head{
+    color: white;
+    background-color: rgb(88, 88, 88);
+    height: 10%;
+    display: flex;
+    border-bottom: 5px solid black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 350px;
+    padding-right: 350px;
+}
+#body{
+    background-image: url(pic/fondol3.jpg);
+    background-size: cover;
+    padding-bottom: 70px;
+    padding-top: 70px;
+    padding-left: 350px;
+    padding-right: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.menu img{
+    height: 50px;
+    width: 50px;
+}
+.menu h1{
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu h1:hover{
+    color: orange;
+}
+#foot{
+    background-color: rgba(226, 185, 0, 0.388);
+    height: 580px;
+}
+#foot h1{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 350px;
+    padding-right: 350px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin:30px 0 30px 0;
+}
+#foot-1{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    padding-left: 350px;
+    padding-right: 350px;
+}
+.aaaa{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 0 10px;
+    margin-right: 20px;
+    padding: 5px;
+    width: 260px;
+    height: 400px;
+}
+.aaaa img{
+    width: 260px;
+    height: 190px;
+}
+.aaaa p{
+    border-bottom: 1px solid gray;
+}
