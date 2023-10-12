@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tai xiu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gieo xúc xắc Online</h1>
+    <img id="dive" src="pic/1.png" alt="" style="height: 70px;">
+    <button id="random" onclick="random()">Gieo</button>
+    <div id="ans"></div>
+
+    <script>
+        var num = 0;
+        var imageSources = ["0","pic/1.png","pic/2.png","pic/3.png","pic/4.png","pic/5.png","pic/6.png"];
+
+        function randomFromOneToSix() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        function random() {
+            num++;
+            var randomNumber = randomFromOneToSix();
+            var addDiv = document.createElement("div");
+            var addP = document.createElement("p");
+            var addImg = document.createElement("img");
+
+            addDiv.setAttribute('class','x')
+            addDiv.id = 'a' + num;
+            addP.textContent = 'Lần thứ ' + num + ':';
+            addImg.src = imageSources[randomNumber];
+
+            addDiv.appendChild(addP);
+            addDiv.appendChild(addImg);
+            document.getElementById("ans").appendChild(addDiv);
+            document.getElementById("dive").src = imageSources[randomNumber];
+        }
+    </script>
+</body>
+</html>
