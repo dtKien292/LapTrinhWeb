@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B20DCAT097</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Trắc nghiệm lịch sử 4</h1>
+    <div id="id1">
+        <p>Câu hỏi #1: Ai là người lãnh đạo nhân dân ta chống lại quân Nam Hán?</p>
+        <button onclick="toggleDisplay('id1','id2')" data-correct="true">Ngô Quyền</button>
+        <button onclick="toggleDisplay('id1','id2')" data-correct="false">Ha Bà Chưng</button>
+    </div>
+    <div id="id2">
+        <p>Câu hỏi #2: Ai là người lãnh đạo nghĩa quân Lam Sơn chống lại quân Minh?</p>
+        <button onclick="toggleDisplay('id2','id3')" data-correct="false">Hồ Quý Ly</button>
+        <button onclick="toggleDisplay('id2','id3')" data-correct="true">Lê Lợi</button>
+    </div>
+    <div id="id3">
+        <p>Câu hỏi #3: Kinh đô nước Âu Lạc đặt ở đâu?</p>
+        <button onclick="answer('id3','id4')" data-correct="true">Long Biên</button>
+        <button onclick="answer('id3','id4')" data-correct="false">Cổ Lao</button>
+    </div>
+    <div id="id4">
+        <p id="result"></p>
+    </div>
+    <script>
+        var correctAnswers = 0;
+        var resultElement = document.getElementById('result');
+        var isCorrect = button.getAttribute('data-correct') === 'true';
+
+        function answer(id1, id2, isCorrect) {
+            var element1 = document.getElementById(id1);
+            var element2 = document.getElementById(id2);
+
+            if (element1.style.display === 'none') {
+                element1.style.display = 'block';
+                element2.style.display = 'none';
+            } else {
+                element1.style.display = 'none';
+                element2.style.display = 'block';
+            }
+            if(correctAnswers===3){
+                resultElement.textContent = 'Bạn thật xuất sắc '
+            }else{
+                resultElement.textContent = 'Bạn trả lời đúng '+correctAnswers+' câu'
+            }
+        }
+
+        function toggleDisplay(id1, id2,isCorrect) {
+            var element1 = document.getElementById(id1);
+            var element2 = document.getElementById(id2);
+
+            if (element1.style.display === 'none') {
+                element1.style.display = 'block';
+                element2.style.display = 'none';
+            } else {
+                element1.style.display = 'none';
+                element2.style.display = 'block';
+            }
+            if (isCorrect) {
+                correctAnswers++;
+            }
+        }
+    </script>
+</body>
+</html>

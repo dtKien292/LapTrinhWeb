@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bài trắc nghiệm</title>
+  <style>
+    .question {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="question">
+    <p>Câu 1: Đâu là màu cơ bản?</p>
+    <button onclick="checkAnswer(this)" data-correct="false">Đỏ</button>
+    <button onclick="checkAnswer(this)" data-correct="false">Xanh</button>
+    <button onclick="checkAnswer(this)" data-correct="true">Đen</button>
+    <button onclick="checkAnswer(this)" data-correct="false">Trắng</button>
+  </div>
+  <div class="question">
+    <p>Câu 2: Bao nhiêu giờ trong một ngày?</p>
+    <button onclick="checkAnswer(this)" data-correct="false">12</button>
+    <button onclick="checkAnswer(this)" data-correct="true">24</button>
+    <button onclick="checkAnswer(this)" data-correct="false">60</button>
+    <button onclick="checkAnswer(this)" data-correct="false">30</button>
+  </div>
+  <div class="question">
+    <p>Câu 3: Ai là người đầu tiên đặt chân lên Mặt Trăng?</p>
+    <button onclick="checkAnswer(this)" data-correct="true">Neil Armstrong</button>
+    <button onclick="checkAnswer(this)" data-correct="false">Buzz Aldrin</button>
+    <button onclick="checkAnswer(this)" data-correct="false">Yuri Gagarin</button>
+    <button onclick="checkAnswer(this)" data-correct="false">John F. Kennedy</button>
+  </div>
+  <div class="question">
+    <p>Câu 4: Đâu là chữ cái đầu tiên trong bảng chữ cái tiếng Anh?</p>
+    <button onclick="checkAnswer(this)" data-correct="true">A</button>
+    <button onclick="checkAnswer(this)" data-correct="false">B</button>
+    <button onclick="checkAnswer(this)" data-correct="false">C</button>
+    <button onclick="checkAnswer(this)" data-correct="false">D</button>
+  </div>
+  <div class="question">
+    <p>Câu 5: Đất nước nào có biển giới dài nhất?</p>
+    <button onclick="checkAnswer(this)" data-correct="false">Mỹ</button>
+    <button onclick="checkAnswer(this)" data-correct="true">Canada</button>
+    <button onclick="checkAnswer(this)" data-correct="false">Nga</button>
+    <button onclick="checkAnswer(this)" data-correct="false">Trung Quốc</button>
+  </div>
+
+  <p id="result">Kết quả: </p>
+
+  <script>
+    var correctAnswers = 0;
+
+    function checkAnswer(button) {
+      var isCorrect = button.getAttribute('data-correct') === 'true';
+
+      if (isCorrect) {
+        correctAnswers++;
+      }
+
+      button.disabled = true;
+
+      var allButtons = document.getElementsByTagName('button');
+      var answeredQuestions = 0;
+
+      for (var i = 0; i < allButtons.length; i++) {
+        if (allButtons[i].disabled) {
+          answeredQuestions++;
+        }
+      }
+
+      if (answeredQuestions === allButtons.length) {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      var resultElement = document.getElementById('result');
+      resultElement.textContent = 'Kết quả: ' + correctAnswers + '/5';
+    }
+  </script>
+</body>
+</html>
