@@ -15,18 +15,11 @@ p{
     font-size: 30px;
 }
 
-#id1{
+#id{
     display: flex;
     flex-direction: column;
 }
-#id2{
-    display: none;
-    flex-direction: column;
-}
-#id3{
-    display: none;
-    flex-direction: column;
-}
+
 .dapan{
     display: flex;
 }

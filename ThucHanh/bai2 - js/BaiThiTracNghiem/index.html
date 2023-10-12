@@ -8,65 +8,48 @@
 </head>
 <body>
     <h1>Trắc nghiệm lịch sử 4</h1>
-    <div id="id1">
-        <p>Câu hỏi #1: Ai là người lãnh đạo nhân dân ta chống lại quân Nam Hán?</p>
+    <div id="id">
+        <p id="q">Câu hỏi #1: Ai là người lãnh đạo nhân dân ta chống lại quân Nam Hán?</p>
         <div class="dapan">
-            <button onclick="toggleDisplay('id1','id2')">Ngô Quyền</button>
-            <button onclick="toggleDisplay('id1','id2')">Ha Bà Chưng</button>
+            <button onclick="checkAnswer()" id="A">Ngô Quyền</button>
+            <button onclick="checkAnswer()" id="B">Ha Bà Chưng</button>
         </div>
     </div>
-    <div id="id2">
-        <p>Câu hỏi #2: Ai là người lãnh đạo nghĩa quân Lam Sơn chống lại quân Minh?</p>
-        <div class="dapan">
-            <button onclick="toggleDisplay('id2','id3')" >Hồ Quý Ly</button>
-            <button onclick="toggleDisplay('id2','id3')" >Lê Lợi</button>
-        </div>
-    </div>
-    <div id="id3">
-        <p>Câu hỏi #3: Kinh đô nước Âu Lạc đặt ở đâu?</p>
-        <div class="dapan">
-            <button onclick="answer('id3','id4')">Long Biên</button>
-            <button onclick="answer('id3','id4')" >Cổ Lao</button>
-        </div>
     </div>
     <div id="id4">
         <p id="result"></p>
     </div>
     <script>
-        var answer1 = 'Ngô Quyền';
-        var answer2 = 'Lê Lợi';
-        var answer3 = 'Long Biên';
+        var answer = ['0','Ngô Quyền','Lê Lợi','Long Biên'];
+        var question = ['Câu hỏi #2: Ai là người lãnh đạo nghĩa quân Lam Sơn chống lại quân Minh?','Câu hỏi #3: Kinh đô nước Âu Lạc đặt ở đâu?'];
+        var A = ['Hồ Quý Ly','Long Biên'];
+        var B = ['Lê Lợi','Cổ Lao']
         var correctAnswers = 0;
-        var resultElement = document.getElementById('result');
+        var num = 1;
 
-        function answer(id1, id2) {
-            var element1 = document.getElementById(id1);
-            var element2 = document.getElementById(id2);
-            element1.style.display = 'none';
-            element2.style.display = 'flex';
+        function checkAnswer() {
             var button = event.target;
             var buttonText = button.textContent; 
-            if (buttonText ===answer3) {
+            if (buttonText === answer[num]) {
                 correctAnswers++;
             }
-            if(correctAnswers===3){
-                resultElement.textContent = 'Bạn thật xuất sắc '
+            num++;
+            if(num===4){
+                document.getElementById('id').style.display='none';
+                if(correctAnswers===3){
+                    document.getElementById('result').textContent = 'Bạn thật xuất sắc ';
+                }else{
+                    document.getElementById('result').textContent = 'Bạn trả lời đúng '+correctAnswers+' câu';
+                }
             }else{
-                resultElement.textContent = 'Bạn trả lời đúng '+correctAnswers+' câu'
+                nextQuestion(num);
             }
         }
 
-        function toggleDisplay(id1, id2) {
-            var element1 = document.getElementById(id1);
-            var element2 = document.getElementById(id2);
-            element1.style.display = 'none';
-            element2.style.display = 'flex';
-            var button = event.target;
-            var buttonText = button.textContent; 
-
-            if (buttonText === answer1 || buttonText === answer2) { // Kiểm tra giá trị của button
-                correctAnswers++; // Tăng giá trị của correctAnswers lên
-            }
+        function nextQuestion(n){
+            document.getElementById('q').textContent = question[n-2];
+            document.getElementById('A').textContent = A[n-2];
+            document.getElementById('B').textContent = B[n-2];
         }
     </script>
 </body>
