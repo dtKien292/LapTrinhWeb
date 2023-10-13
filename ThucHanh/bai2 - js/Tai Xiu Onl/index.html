@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Gieo xúc xắc Online</h1>
-    <img id="dive" src="pic/1.png" alt="" style="height: 70px;">
-    <button id="random" onclick="random()">Gieo</button>
+    <img id="dive" src="pic/1.png" alt="" style="height: 70px; ">
+    <button onclick="flipImage()">Gieo</button>
     <div id="ans"></div>
 
     <script>
@@ -20,9 +20,8 @@
             return Math.floor(Math.random() * 6) + 1;
         }
 
-        function random() {
+        function random(n) {
             num++;
-            var randomNumber = randomFromOneToSix();
             var addDiv = document.createElement("div");
             var addP = document.createElement("p");
             var addImg = document.createElement("img");
@@ -30,12 +29,41 @@
             addDiv.setAttribute('class','x')
             addDiv.id = 'a' + num;
             addP.textContent = 'Lần thứ ' + num + ':';
-            addImg.src = imageSources[randomNumber];
+            addImg.src = imageSources[n];
 
             addDiv.appendChild(addP);
             addDiv.appendChild(addImg);
             document.getElementById("ans").appendChild(addDiv);
-            document.getElementById("dive").src = imageSources[randomNumber];
+            document.getElementById("dive").src = imageSources[n];
+        }
+
+        function flipImage() {
+            var img = document.getElementById("dive");
+            var rotation = 0;
+            var duration = 1000; 
+            var framesPerSecond = 60;
+            var totalFrames = duration / (1000 / framesPerSecond);
+            var frameCount = 0;
+            var interval = setInterval(function() {
+                frameCount++;
+                if (frameCount <= totalFrames / 2) {
+                    rotation += 180 / (totalFrames / 2);
+                } else {
+                    rotation -= 180 / (totalFrames / 2);
+                }
+                img.style.transform = "rotateY(" + rotation + "deg)";
+                if (frameCount >= totalFrames) {
+                    clearInterval(interval);
+                    changeImage();
+                }
+            }, 1000 / framesPerSecond);
+
+            function changeImage() {
+                var randomNumber = randomFromOneToSix();
+                img.style.transform = "rotateY(0deg)"; 
+                img.src = imageSources[randomNumber];
+                random(randomNumber);
+            }
         }
     </script>
 </body>
