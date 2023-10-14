@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang web đăng nhập và bình luận</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="login-container">
+    <h2>Đăng nhập</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Tên đăng nhập" required>
+      <input type="password" id="password" placeholder="Mật khẩu" required>
+      <input type="submit" value="Đăng nhập">
+    </form>
+  </div>
+
+  <div id="comment-container">
+    <h2>Bình luận</h2>
+    <div id="user-info"></div>
+    <form id="comment-form">
+      <input type="text" id="comment-input" placeholder="Nhập bình luận" required>
+      <input type="submit" value="Gửi">
+    </form>
+    <div id="comment-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
