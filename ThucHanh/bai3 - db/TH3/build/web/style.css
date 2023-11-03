@@ -1,0 +1,116 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(240, 240, 240);
+    flex-direction: column;
+    text-align: center;
+    background-image:url("background.png") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+h1 {
+    font-size: 170%;
+    color: rgb(0, 0, 0);
+    margin-bottom: .5em;
+}
+
+label {
+    float: left;
+    width: 7em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 15em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    border: 1px solid #999999;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+span {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+br {
+    clear: both;
+}
+
+.pad_top {
+    padding-top: 0.25em;
+}
+
+.margin_left {
+    margin-left: 0.5em;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+}
+
+table,
+th,
+td {
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #373737;
+}
+
+tr:nth-child(even),
+tr:nth-child(even) th {
+    background-color: rgba(255, 180, 83, 0.739);
+}
+
+table,
+th,
+td {
+    border-radius: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(102, 6, 139);
+    color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+a:hover,
+button:hover {
+    background-color: #555;
+}
+
+button {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
