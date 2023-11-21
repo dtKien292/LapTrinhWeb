@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOT B20DCAT081</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/a.css') }}">
+</head>
+<body>
+    <div class="all">
+        
+        <div class="sidebar">
+            
+            <ul>
+                <hr>
+                <li><a href="#">Dash Board</a></li>
+                <hr>
+                <li><a href="profile.html" target="_blank">Profile</a></li>
+                <hr>
+                <li><a href="data.html" target="_blank">Season Data</a></li>
+                <hr>
+                <li><a href="actions.html" target="_blank">Actions</a></li>
+                <hr>
+            </ul>
+        </div>
+        
+        <div class="content">   
+            <div class="thongtin">
+
+                <div class="hd hd0">
+                    <div class="tt">
+                        Độ Bụi
+                    </div>
+                    <div class="tt0">
+                        68°C
+                    </div>
+                </div>
+
+                <div class="hd hd1">
+                    <div class="tt">
+                        Nhiệt Độ
+                    </div>
+                    <div class="tt1">
+                        68°C
+                    </div>
+                </div>
+                <div class="hd hd2">
+                    <div class="tt">
+                        Độ Ẩm 
+                    </div>
+                    <div class="tt2">
+                        50%
+                    </div>
+                </div>
+                <div class= "hd hd3">
+                    <div class="tt">
+                        Ánh Sáng
+                    </div>
+                    <div class="tt3">
+                        90vh
+                    </div>
+                </div>
+            </div>
+
+            <div class="sodo">
+                <div class="sd sd1">
+                    <div style="text-align: center; font-size: 150%;">Biểu Đồ</div>
+                    <div class="sodoimg">
+                        <!-- <div class="container">
+                            <canvas id="canvas"></canvas>
+                        </div> -->
+                        <div class="container">
+                            <canvas id="canvas"></canvas>
+                        </div>
+                    
+                        <div class="container">
+                            <canvas id="canvas2"></canvas>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+                    </div>
+                </div>
+                <div class="sd sd2">
+                    <div id="light1" class="block block1">
+                        <div class="icon icon1">
+                            <i class=" fa-regular fa-lightbulb fa-3x" id="lightIcon"></i>
+                        </div>
+                        <div class="controls">
+                            <button id="btn_bat" style="background-color: black;"><i class="fa-solid fa-toggle-off fa-1x" id="toggleIcon1"></i></button>
+                        </div>
+                    </div>
+                    <div id="light2" class="block block2">
+                        <div class="icon icon2">
+                            <i class="fas fa-fan fa-3x" id="fanIcon"></i>
+                        </div>
+                        <div class="controls">
+                            <button id="btn_quat" style="background-color: black;"><i class="fa-solid fa-toggle-off fa-1x" id="toggleIcon"></i></button>
+                        </div>
+                    </div>
+                    <div id="light3" class="block block3">
+                        <div class="icon icon3">
+                            <i class=" fa-regular fa-lightbulb fa-3x" id="light2Icon"></i>
+                        </div>
+                        <div class="controls">
+                            <button id="btn_bat_2" style="background-color: black;"><i class="fa-solid fa-toggle-off fa-1x" id="toggleIcon2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        var isLightOn = false;
+        var isFanOn = false;
+        var isLight = false;
+        document.getElementById("btn_bat").addEventListener("click", function() {
+            var xhr = new XMLHttpRequest();
+            var url = "/";           
+            xhr.open("POST", url, true);  
+            isLightOn = !isLightOn;  
+            var data = new FormData();
+            data.append('btn_bat', isLightOn ? 'on' : 'off');           
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log("Yêu cầu đã được gửi và xử lý thành công.");
+                    updateLightIcon();
+                }
+            };    
+            xhr.send(data);
+        });
+
+        document.getElementById("btn_quat").addEventListener("click", function() {
+            var xhr = new XMLHttpRequest();
+            var url = "/";           
+            xhr.open("POST", url, true);   
+            isFanOn = !isFanOn;
+            var data = new FormData();
+            data.append('btn_quat', isFanOn ? 'on' : 'off'); 
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log("Yêu cầu đã được gửi và xử lý thành công.");
+                    //updateFanIcon();
+                }
+            };
+            xhr.send(data);
+        });
+        
+        document.getElementById("btn_bat_2").addEventListener("click", function() {
+            var xhr = new XMLHttpRequest();
+            var url = "/";           
+            xhr.open("POST", url, true);  
+            isLight = !isLight;  
+            var data = new FormData();
+            data.append('btn_bat_2', isLight ? 'on' : 'off'); // Sử dụng giá trị của isLightOn           
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log("Yêu cầu đã được gửi và xử lý thành công.");
+                    updateLight2Icon();
+                }
+            };    
+            xhr.send(data);
+        });
+
+        function updateLightIcon() { // thay doi trang thai cua nut bam
+            var toggleIcon = document.getElementById("toggleIcon1");
+            if (isLightOn) {            
+                toggleIcon.classList.remove("fa-toggle-off");
+                toggleIcon.classList.add("fa-toggle-on");
+                document.getElementById("btn_bat").style.backgroundColor = "green";
+            } else {       
+                toggleIcon.classList.remove("fa-toggle-on");
+                toggleIcon.classList.add("fa-toggle-off");
+                document.getElementById("btn_bat").style.backgroundColor = "black";
+            }
+        }
+
+        function updateLight2Icon() { // thay doi trang thai cua nut bam
+            var toggleIcon3 = document.getElementById("toggleIcon2");
+            if (isLight) {            
+                toggleIcon3.classList.remove("fa-toggle-off");
+                toggleIcon3.classList.add("fa-toggle-on");
+                document.getElementById("btn_bat_2").style.backgroundColor = "green";
+            } else {       
+                toggleIcon3.classList.remove("fa-toggle-on");
+                toggleIcon3.classList.add("fa-toggle-off");
+                document.getElementById("btn_bat_2").style.backgroundColor = "black";
+            }
+        }
+
+        function updateFanIcon(){
+            var toggleIcon2 = document.getElementById("toggleIcon");
+            
+            if(isFanOn){
+                toggleIcon2.classList.remove("fa-toggle-off");
+                toggleIcon2.classList.add("fa-toggle-on");
+                document.getElementById("btn_quat").style.backgroundColor = "green";
+            }
+            else {
+                toggleIcon2.classList.remove("fa-toggle-on");
+                toggleIcon2.classList.add("fa-toggle-off");
+                document.getElementById("btn_quat").style.backgroundColor = "black";
+            }
+        }
+
+        
+        function fetchFanStatus() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/get_fan_status", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                var fanStatus = response.fanStatus;
+                var fanIcon = document.getElementById('fanIcon');
+                var toggleIcon2 = document.getElementById("toggleIcon");
+
+                if(fanStatus===1){
+                    fanIcon.classList.add('rotate-icon');
+                    toggleIcon2.classList.remove("fa-toggle-off");
+                    toggleIcon2.classList.add("fa-toggle-on");
+                    document.getElementById("btn_quat").style.backgroundColor = "green";
+                }
+                else {
+                    fanIcon.classList.remove('rotate-icon');
+                    toggleIcon2.classList.remove("fa-toggle-on");
+                    toggleIcon2.classList.add("fa-toggle-off");
+                    document.getElementById("btn_quat").style.backgroundColor = "black";
+                }
+            }
+        };
+        xhr.send();
+        }
+        setInterval(fetchFanStatus, 100);
+
+        function fetchLedStatus() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/get_led_status", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                var ledStatus = response.ledStatus;
+                var lightIcon = document.getElementById("lightIcon");
+                if(ledStatus===1){
+                    lightIcon.classList.add("fa-solid");
+                    lightIcon.classList.remove("fa-regular");
+                }
+                else {
+                    lightIcon.classList.add("fa-regular");
+                    lightIcon.classList.remove("fa-solid");
+                }
+            }
+        };
+        xhr.send();
+        }
+        setInterval(fetchLedStatus, 100);
+        
+        function fetchLed2Status() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/get_led3_status", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                var led3Status = response.led3Status;
+                var light2Icon = document.getElementById("light2Icon");
+                if(led3Status===1){
+                    light2Icon.classList.add("fa-solid");
+                    light2Icon.classList.remove("fa-regular");
+                }
+                else {
+                    light2Icon.classList.add("fa-regular");
+                    light2Icon.classList.remove("fa-solid");
+                }
+            }
+        };
+        xhr.send();
+        }
+        setInterval(fetchLed2Status, 100);
+    </script>
+</body>
+</html>

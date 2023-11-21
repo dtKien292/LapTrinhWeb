@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Sensor</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-radius: 5px 5px 0 0;
+            background: #fff;
+            overflow: hidden;
+            width: 100%;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        table thead tr {
+            background: #34a853;
+            color: #fff;
+        }
+
+        table tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        span {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        button {
+            margin: 15px;
+            color: #FFF;
+            background: #62B954;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .main {
+            border-radius: 20px;
+            box-shadow: 0px 1px 3px 0 rgb(0 0 0 / 35%);
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        let currentPage = 1;
+        let sortColumn = "id";
+        let sortOrder = "desc";
+        var isSearching = 1;
+
+        function loadSensorData(page, columnToSort, sortbOrder) {
+            if (isSearching === 1) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", `/get_sensor_data?page=${page}&sort=${columnToSort}&order=${sortbOrder}`, true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var data = JSON.parse(xhr.responseText);
+                        var sensorData = document.getElementById("sensorData");
+                        sensorData.innerHTML = "";
+
+                        for (var i = 0; i < data.length; i++) {
+                            var row = sensorData.insertRow(i);
+                            row.insertCell(0).innerHTML = i;
+                            row.insertCell(1).innerHTML = data[i].id;
+                            row.insertCell(2).innerHTML = data[i].timestamp;
+                            row.insertCell(3).innerHTML = data[i].temperature;
+                            row.insertCell(4).innerHTML = data[i].humidity;
+                            row.insertCell(5).innerHTML = data[i].light;
+                            row.insertCell(6).innerHTML = data[i].dobui;
+                        }
+
+                        currentPage = page;
+                        sortColumn = columnToSort;
+                        sortOrder = sortbOrder;
+                        document.getElementById("currentPage").textContent = "Page: " + currentPage;
+                    }
+                };
+                xhr.send();
+            }
+        }
+
+        function updateDataPeriodically() {
+            if (isSearching === 1) {
+                loadSensorData(currentPage, sortColumn, sortOrder);
+            }
+            setTimeout(updateDataPeriodically, 2000);
+        }
+
+        updateDataPeriodically();
+
+        function loadPreviousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                loadSensorData(currentPage, sortColumn, sortOrder);
+            }
+        }
+
+        function loadNextPage() {
+            currentPage++;
+            loadSensorData(currentPage, sortColumn, sortOrder);
+        }
+
+        function searchByTemperature() {
+            isSearching = 2;
+            var searchInput = document.getElementById('searchInput').value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", '/search_sensor_data', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var data = JSON.parse(xhr.responseText);
+                        var sensorData = document.getElementById("sensorData");
+                        sensorData.innerHTML = "";
+
+                        if (data.length > 0) {
+                            for (var i = 0; i < data.length; i++) {
+                                var row = sensorData.insertRow(i);
+                                row.insertCell(0).innerHTML = i;
+                                row.insertCell(1).innerHTML = data[i].id;
+                                row.insertCell(2).innerHTML = data[i].timestamp;
+                                row.insertCell(3).innerHTML = data[i].temperature;
+                                row.insertCell(4).innerHTML = data[i].humidity;
+                                row.insertCell(5).innerHTML = data[i].light;
+                                row.insertCell(6).innerHTML = data[i].dobui;
+                            }
+                        } else {
+                            sensorData.innerHTML = "<tr><td colspan='8'>Không tìm thấy dữ liệu phù hợp.</td></tr>";
+                        }
+                    } else {
+                        console.error("Lỗi khi tìm kiếm dữ liệu.");
+                    }
+                }
+            };
+            xhr.send("tk=" + searchInput);
+        }
+
+        function uploadData() {
+            if (isSearching === 2) {
+                searchByTemperature();
+            }
+            setTimeout(uploadData, 2000);
+        }
+
+        uploadData();
+
+        function searchByLight() {
+            isSearching = 3;
+            var searchInput = document.getElementById('searchInputL').value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", '/search_sensor_dataL', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var data = JSON.parse(xhr.responseText);
+                        var sensorData = document.getElementById("sensorData");
+                        sensorData.innerHTML = "";
+
+                        if (data.length > 0) {
+                            for (var i = 0; i < data.length; i++) {
+                                var row = sensorData.insertRow(i);
+                                row.insertCell(0).innerHTML = i;
+                                row.insertCell(1).innerHTML = data[i].id;
+                                row.insertCell(2).innerHTML = data[i].timestamp;
+                                row.insertCell(3).innerHTML = data[i].temperature;
+                                row.insertCell(4).innerHTML = data[i].humidity;
+                                row.insertCell(5).innerHTML = data[i].light;
+                                row.insertCell(6).innerHTML = data[i].dobui;
+                            }
+                        } else {
+                            sensorData.innerHTML = "<tr><td colspan='8'>Không tìm thấy dữ liệu phù hợp.</td></tr>";
+                        }
+                    } else {
+                        console.error("Lỗi khi tìm kiếm dữ liệu.");
+                    }
+                }
+            };
+            xhr.send("tl=" + searchInput);
+        }
+
+        function uploadDataL() {
+            if (isSearching === 3) {
+                searchByLight();
+            }
+            setTimeout(uploadDataL, 2000);
+        }
+
+        uploadDataL();
+
+        function searchByDA() {
+            isSearching = 4;
+            var searchInput = document.getElementById('searchInputDA').value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", '/search_sensor_dataDA', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var data = JSON.parse(xhr.responseText);
+                        var sensorData = document.getElementById("sensorData");
+                        sensorData.innerHTML = "";
+
+                        if (data.length > 0) {
+                            for (var i = 0; i < data.length; i++) {
+                                var row = sensorData.insertRow(i);
+                                row.insertCell(0).innerHTML = i;
+                                row.insertCell(1).innerHTML = data[i].id;
+                                row.insertCell(2).innerHTML = data[i].timestamp;
+                                row.insertCell(3).innerHTML = data[i].temperature;
+                                row.insertCell(4).innerHTML = data[i].humidity;
+                                row.insertCell(5).innerHTML = data[i].light;
+                                row.insertCell(6).innerHTML = data[i].dobui;
+                            }
+                        } else {
+                            sensorData.innerHTML = "<tr><td colspan='8'>Không tìm thấy dữ liệu phù hợp.</td></tr>";
+                        }
+                    } else {
+                        console.error("Lỗi khi tìm kiếm dữ liệu.");
+                    }
+                }
+            };
+            xhr.send("td=" + searchInput);
+        }
+
+        function uploadDataDA() {
+            if (isSearching === 4) {
+                searchByDA();
+            }
+            setTimeout(uploadDataDA, 2000);
+        }
+
+        uploadDataDA();
+
+        function searchByDate() {
+        isSearching = 5;
+        var searchInputDate = document.getElementById('searchInputDate').value;
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", '/search_sensor_data_date', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                var data = JSON.parse(xhr.responseText);
+                var sensorData = document.getElementById("sensorData");
+                sensorData.innerHTML = "";
+
+                if (data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var row = sensorData.insertRow(i);
+                        row.insertCell(0).innerHTML = i;
+                        row.insertCell(1).innerHTML = data[i].id;
+                        row.insertCell(2).innerHTML = data[i].timestamp;
+                        row.insertCell(3).innerHTML = data[i].temperature;
+                        row.insertCell(4).innerHTML = data[i].humidity;
+                        row.insertCell(5).innerHTML = data[i].light;
+                        row.insertCell(6).innerHTML = data[i].dobui;
+                    }
+                } else {
+                    sensorData.innerHTML = "<tr><td colspan='8'>Không tìm thấy dữ liệu phù hợp cho ngày " + searchInputDate + ".</td></tr>";
+                }
+            } else {
+                console.error("Lỗi khi tìm kiếm dữ liệu theo ngày.");
+            }
+        }
+    };
+    xhr.send("date=" + searchInputDate);
+}
+
+        function uploadDataDate() {
+            if (isSearching === 5) {
+                searchByDate();
+            }
+            setTimeout(uploadDataDate, 2000);
+        }
+
+        uploadDataDate();
+
+        function searchByDB() {
+            isSearching = 6;
+            var searchInput = document.getElementById('searchInputDB').value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", '/search_sensor_dataDB', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var data = JSON.parse(xhr.responseText);
+                        var sensorData = document.getElementById("sensorData");
+                        sensorData.innerHTML = "";
+
+                        if (data.length > 0) {
+                            for (var i = 0; i < data.length; i++) {
+                                var row = sensorData.insertRow(i);
+                                row.insertCell(0).innerHTML = i;
+                                row.insertCell(1).innerHTML = data[i].id;
+                                row.insertCell(2).innerHTML = data[i].timestamp;
+                                row.insertCell(3).innerHTML = data[i].temperature;
+                                row.insertCell(4).innerHTML = data[i].humidity;
+                                row.insertCell(5).innerHTML = data[i].light;
+                                row.insertCell(6).innerHTML = data[i].dobui;
+                            }
+                        } else {
+                            sensorData.innerHTML = "<tr><td colspan='8'>Không tìm thấy dữ liệu phù hợp.</td></tr>";
+                        }
+                    } else {
+                        console.error("Lỗi khi tìm kiếm dữ liệu.");
+                    }
+                }
+            };
+            xhr.send("db=" + searchInput);
+        }
+
+        function uploadDataDB() {
+            if (isSearching === 6) {
+                searchByDB();
+            }
+            setTimeout(uploadDataDB, 2000);
+        }
+
+        uploadDataDB();
+
+        
+        function nextData() {
+            isSearching = 1;
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <form onsubmit="searchByDate(); return false;">
+            <input type="date" id="searchInputDate" name="date" placeholder="Chọn ngày">
+            <input type="submit" value="Tìm kiếm theo ngày">
+        </form><br>
+        <form onsubmit="searchByTemperature(); return false;">
+            <input type="text" id="searchInput" name="tk" placeholder="Nhập nhiệt độ">
+            <input type="submit" value="Tìm kiếm">
+        </form>
+        <form onsubmit="searchByLight(); return false;">
+            <input type="text" id="searchInputL" name="tl" placeholder="Nhập Ánh sáng">
+            <input type="submit" value="Tìm kiếm">
+        </form>
+        <form onsubmit="searchByDA(); return false;">
+            <input type="text" id="searchInputDA" name="td" placeholder="Nhập độ ẩm">
+            <input type="submit" value="Tìm kiếm">
+        </form>
+        <form onsubmit="searchByDB(); return false;">
+            <input type="text" id="searchInputDB" name="db" placeholder="Nhập độ bụi">
+            <input type="submit" value="Tìm kiếm">
+        </form>
+        <h1>Data Sensor</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>SSID</th>
+                    <th>Time</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>Light</th>
+                    <th>Độ bụi</th>
+                </tr>
+            </thead>
+            <tbody id="sensorData">
+            </tbody>
+        </table>
+        <span id="currentPage">Page: 1</span>
+        <button onclick="loadPreviousPage()">Previous</button>
+        <button onclick="loadNextPage()">Next</button>
+        <button onclick="nextData()">Tiếp tục in dữ liệu</button>
+    </div>
+</body>
+</html>

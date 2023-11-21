@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ActionDaTa</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-radius: 5px 5px 0 0;
+            background: #fff;
+            overflow: hidden;
+            width: 100%;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        table thead tr {
+            background: #34a853;
+            color: #fff;
+        }
+
+        table tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+        span{
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        button {
+            margin: 15px;
+            color: #FFF;
+            background: #62B954;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .main {
+            border-radius: 20px;
+            box-shadow: 0px 1px 3px 0 rgb(0 0 0 / 35%);
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        let currentPage = 1;
+
+        function loadSensorData(page) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/get_action_data?page=" + page, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    var sensorData = document.getElementById("sensorData");
+                    sensorData.innerHTML = "";
+
+                    for (var i = 0; i < data.length; i++) {
+                        var row = sensorData.insertRow(i);
+                        row.insertCell(0).innerHTML = i;
+                        row.insertCell(1).innerHTML = data[i].id;
+                        row.insertCell(2).innerHTML = data[i].button_id;
+                        row.insertCell(3).innerHTML = data[i].status;
+                        row.insertCell(4).innerHTML = data[i].timestamp;
+                    }
+
+                    
+                    currentPage = page;
+                    document.getElementById("currentPage").textContent = "Page: " + currentPage;
+                }
+            };
+            xhr.send();
+        }
+
+        function updateDataPeriodically() {
+            loadSensorData(currentPage);
+            setTimeout(updateDataPeriodically, 2000);
+        }
+
+        updateDataPeriodically();
+
+        function loadPreviousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                loadSensorData(currentPage);
+            }
+        }
+
+        function loadNextPage() {
+            currentPage++;
+            loadSensorData(currentPage);
+        }
+        loadSensorData(currentPage);
+    </script>
+</head>
+<body>
+    <div class="main">
+        <h1>ActionDaTa</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>SSID</th>
+                    <th>Led/Fan</th>
+                    <th>Status</th>
+                    <th>timestamp</th>
+                </tr>
+            </thead>
+            <tbody id="sensorData">
+            </tbody>
+        </table>
+        <span id="currentPage">Page: 1</span>
+        <button onclick="loadPreviousPage()">Previous</button>
+        <button onclick="loadNextPage()">Next</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/chiTietsp.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css" />
+    <title>Document</title>
+</head>
+
+<body class="background-color">
+    <!-- Header -->
+    <div class="header-top" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-wrap">
+                        <span>Laptop uy tín số 1 Việt Nam</span>
+                        <div class="inner-item">
+                            <span>Theo dõi chúng tôi</span>
+                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                        <div class="inner-item">
+                            <i class="fa-solid fa-headset"></i>
+                            Hỗ trợ
+                        </div>
+                        <div class="inner-item">
+                            <i class="fa-solid fa-phone"></i>
+                            Hotline: 0123456789
+                        </div>
+                        <div class="inner-item">
+                            <a href="dangNhap.html">Đăng ký|Đăng nhập</a>
+                            <a href="dangNhap.html">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-1">
+                    <div class="inner-logo">
+                        <a href="index.html">
+                            <img src="assets/images/image.png" alt="Ảnh logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-9">
+                    <form action="" class="inner-search">
+                        <input type="text" placeholder="Bạn đang tìm kiếm sản phẩm gì...">
+                        <button type="submit">
+                            <img src="assets/images/search.svg" alt="">
+                        </button>
+                    </form>
+                </div>
+                <div class="col-xl-2">
+                    <div class="inner-gioHang">
+                        <a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- End Header -->
+
+    <!-- section-1 -->
+    <div class="section-1">
+        <div class="container">
+            <div class="row">
+                <div class="inner-wrap">
+                    <div class="col-4">
+                        <div class="inner-image">
+                            <img id="image" src="assets/images/image laptop/3004_r7000.jpg" alt="">
+                        </div>
+                        <div class="imgChange">
+                            <img onclick="change1()"
+                                src="assets/images/image laptop/3004_c3zzbg9e5memiezohvjlvty9e_3819.jpg" alt="">
+                            <img onclick="change2()"
+                                src="assets/images/image laptop/3004_pa7ryjkiaw1yjcovhqdiihauj_4365.jpg" alt="">
+                            <img onclick="change3()"
+                                src="assets/images/image laptop/3004_qxt8dcy7yjibvcwvhlwvbhjag_4192.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="inner-price">
+                            <div class="inner-name"><h3>Tên máy</h3></div>
+                            <h5>Deal: 26.890.000 VNĐ </h5>
+                            <p> <del>33.990.000 </del>VNĐ</p>
+                        </div>
+                        <div class="inner-gif">
+                            <div class="inner-title">
+                                <i class="fa-solid fa-gift"></i>
+                                Quà tặng/Khuyến mãi
+                            </div>
+                            <p>✅ Tặng Windows 11 bản quyền theo máy</p>
+                            <p>✅ Miễn phí cân màu màn hình công nghệ cao</p>
+                            <p>✅ Balo thời trang</p>
+                            <p>✅ Chuột không dây + Bàn di cao cấp</p>
+                            <p>✅ Tặng gói cài đặt, bảo dưỡng, vệ sinh máy trọn đời</p>
+                            <p>✅ Tặng Voucher giảm giá cho lần mua tiếp theo</p>
+                        </div>
+                        <a href="gioHang.html" class="btn-cart">Thêm vào giỏ hàng</a>
+                    </div>
+                    <div class="col-4">
+                        <h4>Thông số kỹ thuật</h4>
+                        <table>
+                            <tr>
+                                <td>CPU</td>
+                                <td>Ryzen 7 7735H (3.2 GHz up to 4.8 GHz, 8 Cores, 16 Threads, 16 MB Cache)</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>16 GB DDR5 4800MHz</td>
+                            </tr>
+                            <tr>
+                                <td>Ổ cứng</td>
+                                <td>512GB PCIe NVMe M.2 SSD Gen 4</td>
+                            </tr>
+                            <tr>
+                                <td>Card VGA</td>
+                                <td>NVIDIA Geforce RTX 4060 8GB GDDR6 (125W)</td>
+                            </tr>
+                            <tr>
+                                <td>MUX Switch</td>
+                                <td>Có</td>
+                            </tr>
+                            <tr>
+                                <td>Màn hình</td>
+                                <td>15.6" (2560x1440) IPS, 350nits, 100% sRGB, 165Hz, Dolby® Vision™, G-Sync, Free-Sync</td>
+                            </tr>
+                            <tr>
+                                <td>Webcam</td>
+                                <td>HD Webcam </td>
+                            </tr>
+                            <tr>
+                                <td>Cổng kết nối</td>
+                                <td>1x E-camera shutter
+
+                                    1x SD card
+                                    
+                                    2x USB-A 3.2 Gen 2
+                                    
+                                    1x RJ45 (mạng LAN)
+                                    
+                                    1x HDMI 2.1
+                                    
+                                    1x power input
+                                    
+                                    2x USB-C 3.2 gen 2</td>
+                            </tr>
+                            <tr>
+                                <td>Trọng lượng</td>
+                                <td>2.3 kg </td>
+                            </tr>
+                            <tr>
+                                <td>Pin</td>
+                                <td>4cell, 71whr, Super Rapid Charge</td>
+                            </tr>
+                            <tr>
+                                <td>Hệ điều hành</td>
+                                <td>Windows bản quyền</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section-1 -->
+
+    <!-- Section-12 -->
+    <div class="section-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="inner-service">
+                        <div class="img">
+                            <img src="assets/images/XMLID 141.svg" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>SẢN PHẨM CHẤT LƯỢNG</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="inner-service">
+                        <div class="img">
+                            <img src="assets/images/Group 780.svg" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>DỊCH VỤ CHUYÊN NGHIỆP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="inner-service">
+                        <div class="img">
+                            <img src="assets/images/truck 1.svg" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>GIAO HÀNG TOÀN QUỐC</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="inner-service">
+                        <div class="img">
+                            <img src="assets/images/Group 806.svg" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>MIỄN PHÍ BẢO HÀNH</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section-12 -->
+
+    <!-- Section-13 -->
+    <div class="section-13">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <img class="logo-footer" src="assets/images/core/logo-main.svg" alt="">
+                    <div class="contact">
+                        <p>HOTLINE BÁN HÀNG</p>
+                        <div class="img">
+                            <img src="assets/images/demo/fluent_video-person-call-16-filled.png" alt="">
+                            <p>0912 250 625</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <p>CHĂM SÓC KHÁCH HÀNG</p>
+                        <div class="img">
+                            <img src="assets/images/demo/fluent_video-person-call-16-filled.png" alt="">
+                            <p>0912 250 625</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="inner-wrap">
+                        <div class="CSKH">
+                            <h5>CHĂM SÓC KHÁCH HÀNG</h5>
+                            <p>Chính sách bảo hành<br> Chính sách đổi trả sản phẩm <br>Hỏi đáp mua hàng online</p>
+                        </div>
+                        <div class="store">
+                            <h5>CỬA HÀNG</h5>
+                            <p>Laptop chính hãng <br>
+                                Bảo hành chọn đời <br>
+                                Sản phẩm khuyến mại
+                            </p>
+                        </div>
+                        <div class="about">
+                            <h5>VỀ CHÚNG TÔI</h5>
+                            <p>Giới thiệu công ty <br>
+                                Hệ thống cửa hàng <br>
+                                Tuyển dụng
+                            </p>
+                        </div>
+                        <div class="lienHe">
+                            <h5>LIÊN HỆ</h5>
+                            <p>
+                                <img src="assets/images/Location2.png" alt="">56, Trần Phú, Hà Đông,
+                                <br> Hà Nội <br>
+                                <img src="assets/images/Letter.png" alt="">Hệ thống cửa hàng <br>
+                                <img src="assets/images/call.png" alt="">Tuyển dụng
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End section-13 -->
+    <div class="button-contact">
+        <a class="button-1" href="https://www.facebook.com/">
+            <i class="fa-brands fa-facebook-messenger"></i>
+        </a>
+    </div>
+    <!-- <div class="button-home">
+        <a class="button-1" href="#home">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+    </div> -->
+    <footer class="footer">
+        <p>Copyright @2019 LAPTOP.vn</p>
+    </footer>
+
+    <!-- link nhúng -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/slide.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+.header-top{
+    padding: 5px 0px;
+    background-color: var(--color-2);
+}
+.header-top .inner-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header-top .inner-item{
+    font-size: 15px;
+    line-height: 1.2;
+    color: #ffffff;
+    font-family: var(--font-1);
+    margin: 0 20px;
+}
+.header-top .inner-item a{
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 8px;
+}
+span{
+    color: #FFF;
+}
+.inner-account{
+    display: flex;
+}
+/* End Header-top */
+
+/* Header-main */
+.header{
+    background-color: var(--color-2);
+    padding: 0 0 15px 0;
+}
+.header .inner-logo img{
+    width: 70px;
+    height: auto;
+}
+.header .inner-search{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.header .inner-search input{
+    height: 36px;
+    border: 0;
+    padding: 0 18px;
+    flex: 1;
+    font-size: 14px;
+    outline: 0;
+}
+.header .inner-search button{
+    background-color: #FFFFFF;
+    border: 0;
+    width: 36px;
+    height: 36px;
+}
+.header .inner-gioHang{
+    position: relative;
+    text-align: center;
+}
+.header .inner-gioHang {
+    height: 24px;
+    width: auto;
+}
+.header .inner-gioHang i{
+    color: #FFF;
+    font-size: 24px;
+}
+.header .inner-gioHang .inner-badge{
+    position: absolute;
+    top: -10px;
+    right: 55px;
+    border: 1px solid #FFF;
+    display: inline-flex;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 25px;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    padding: 5px;
+}
+.no-border {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+.logo-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    margin: 10px 39px;
+}
+
+.inner-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-addr {
+    margin: 0 26px;
+}
+.section1{
+    margin-left: 165px;
+    padding-top: 20px;
+}
+.section1 .inner-image{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.section-4{
+    padding: 50px 0;
+}
+.section-4 .inner-image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.section-4 .inner-item{
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%);
+    background: #FFF;
+    padding: 10px;
+}
+.section-4 .inner-item img{
+    padding: 10px;
+    transition: all 0.4s ease-in-out;
+}
+.section-4 .inner-item img:hover{
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+}
+.section-4 .inner-name p{
+    font-size: 18px;
+}
+.section-4 .inner-price h5{
+    color: var(--color-3);
+    font-style: italic;
+}

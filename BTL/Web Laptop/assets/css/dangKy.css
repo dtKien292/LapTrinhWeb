@@ -1,0 +1,78 @@
+.container{
+    margin:0 200px;
+}
+.header-dangKy .inner-logo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.header-dangKy .inner-logo img{
+    width: 100%;
+}
+.header-dangKy .inner-logo p{
+    margin-left: 50px;
+    font-size: 22px;
+}
+.inner-main{
+    background-image: url(../images/4k-laptop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.inner-main .inner-wrap{
+    padding: 100px 400px;
+}
+.inner-main .inner-form .inner-title{
+    display: block;
+    margin: 0 0 20px 0;
+    font-size: 25px;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 10px;
+}
+.inner-main .inner-form{    
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+}
+.inner-main .inner-form input[type="text"], input[type="password"]{
+    margin: 10px 0;
+    width: 275px;
+    height: 30px;
+    border: 1px solid #DDD;
+    outline: none;
+    border-radius: 15px;
+    padding: 10px;
+}
+.inner-main .inner-form input:focus{
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
+}
+.inner-main .inner-form p{
+    color: rgba(0,0,0,.26);;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+.inner-main .inner-form p a{
+    margin-left: 10px;
+    color: #F3816B;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+input[type="submit"]{
+    padding: 10px 30px;
+    font-size: 14px;
+    color: #FFF;
+    background: var(--color-1);
+    border-radius: 10px;
+    border: none;
+}
+.inner-main .inner-form a{
+    text-align: center;
+    color: #DDD;
+}

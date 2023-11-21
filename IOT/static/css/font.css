@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.page {
+    width: 100%;
+    height: 23cm;
+    background-image: url("{{ url_for('static', filename='image/giphy.gif') }}"); 
+    background-size: cover;
+    border-radius: 0.7cm;
+}
+.header {
+    width: 100%;
+    height: 3cm;
+    background-color: rgba(1,1,1,0.5);
+    display: flex;
+    border-radius: 0.7cm;
+    border: 2px solid whitesmoke;
+}
+.mxh {
+    height: 2cm;
+    width: 2cm;
+    margin: 20px 210px ; 
+} 
+.imgg {
+    height: 100%;
+    width: 100%;
+    border: 1px solid whitesmoke;
+    border-radius: 0.5cm;
+    transition: transform 0.3s; 
+}
+.mxh :hover {
+    transform: scale(1.3);
+}
+
+.prf {
+    width: 9cm;
+    height: 14cm;
+    background-color: rgba(1,1,1,0.5);
+    margin-top: 20px;
+    border: 2px solid whitesmoke;
+    margin-left: 30cm;
+    border-radius: 0.5cm;
+}
+
+.myprf {
+    color: rgb(201, 209, 216);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 5px;
+}
+.prfcn {
+    color: rgb(201, 209, 216);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 5px;
+    line-height: 2cm;
+    font-size: 150%;
+    margin-left: 5px;
+}
+.prf:hover{
+    transform: scale(1.05);
+    background-color: rgba(209, 221, 203, 0.7);
+    transition: transform 0.3s; 
+    color: black;
+    background-image: url("{{ url_for('static', filename='image/ava.jpg') }}");
+    background-size: cover;
+    border-radius: 0.7cm;
+}
+.prfcn:hover {
+    color: white;
+    position: absolute;
+} 
