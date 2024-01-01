@@ -165,16 +165,63 @@ function openProfile(){
   blacks.style.backgroundColor = 'rgba(45, 45, 45, 0.10)';
 }
 
+let theOrder = document.querySelector('#the-order');
+const orderAct = document.getElementById('order-svg');
+
+function openOrder(){
+  an_the();
+  theOrder.style.zIndex = 10;
+  orderAct.classList.add('svg-active');
+  blacks.style.zIndex = 9;
+  blacks.style.backgroundColor = 'rgba(45, 45, 45, 0.10)';
+}
+
 function an_the(){
   theCart.style.zIndex = -99;
   theLogin.style.zIndex = -99;
   theSignUp.style.zIndex = -99;
   theProfile.style.zIndex = -99;
+  theOrder.style.zIndex = -99;
   blacks.style.zIndex = -50;
   blacks.style.backgroundColor = 'white';
   cartAct.classList.remove('svg-active');
   profileAct.classList.remove('svg-active');
+  orderAct.classList.remove('svg-active')
 }
 
+// hover ảnh
+const image1 = document.getElementById('type-img-2');
+const image2 = document.getElementById('type-img-3');
+const image3 = document.getElementById('type-img-4');
 
+let img1Src = "image/váy đen.png"; 
+let img2Src = "image/váy đen.png";
+let img3Src = "image/váy đen.png";
 
+let hoverImg1Src = "image/váy đen (1).png";
+let hoverImg2Src = "image/váy đen (1).png"; 
+let hoverImg3Src = "image/váy đen (1).png";
+
+image1.addEventListener('mouseenter', function(){
+  image1.src = hoverImg1Src;
+});
+
+image1.addEventListener('mouseleave', function(){
+  image1.src = img1Src;
+});
+
+image2.addEventListener('mouseenter', function(){
+  image2.src = hoverImg2Src; 
+});
+
+image2.addEventListener('mouseleave', function(){
+  image2.src = img2Src;
+});
+
+image3.addEventListener('mouseenter', function(){
+  image3.src = hoverImg3Src;
+}); 
+
+image3.addEventListener('mouseleave', function(){
+  image3.src = img3Src;
+});

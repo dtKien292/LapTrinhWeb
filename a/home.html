@@ -55,7 +55,8 @@
         d="M2 2H7.52381L11.2248 20.491C11.351 21.1267 11.6969 21.6978 12.2018 22.1043C12.7068 22.5108 13.3386 22.7267 13.9867 22.7143H27.4095C28.0576 22.7267 28.6894 22.5108 29.1943 22.1043C29.6993 21.6978 30.0451 21.1267 30.1714 20.491L32.381 8.90476H8.90476"
         stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
-    <svg id="order-svg" xmlns="http://www.w3.org/2000/svg" width="34" height="37" viewBox="0 0 34 37" fill="none">
+    <svg id="order-svg" xmlns="http://www.w3.org/2000/svg" width="34" height="37" viewBox="0 0 34 37" fill="none"
+      onclick="openOrder()">
       <path
         d="M7 2L2 8.66667V32C2 32.8841 2.35119 33.7319 2.97631 34.357C3.60143 34.9821 4.44928 35.3333 5.33333 35.3333H28.6667C29.5507 35.3333 30.3986 34.9821 31.0237 34.357C31.6488 33.7319 32 32.8841 32 32V8.66667L27 2H7Z"
         stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -473,13 +474,17 @@
         <path d="M1 1.5L18 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </div>
-    <div  class="login">
+    <div class="login">
       <div id="avt">
         <svg xmlns="http://www.w3.org/2000/svg" width="72" height="82" viewBox="0 0 72 82" fill="none">
-          <path d="M69 78.125V69.875C69 65.4989 67.2616 61.3021 64.1673 58.2077C61.0729 55.1134 56.8761 53.375 52.5 53.375H19.5C15.1239 53.375 10.9271 55.1134 7.83274 58.2077C4.73839 61.3021 3 65.4989 3 69.875V78.125" stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M36 36.875C45.1127 36.875 52.5 29.4877 52.5 20.375C52.5 11.2623 45.1127 3.875 36 3.875C26.8873 3.875 19.5 11.2623 19.5 20.375C19.5 29.4877 26.8873 36.875 36 36.875Z" stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path
+            d="M69 78.125V69.875C69 65.4989 67.2616 61.3021 64.1673 58.2077C61.0729 55.1134 56.8761 53.375 52.5 53.375H19.5C15.1239 53.375 10.9271 55.1134 7.83274 58.2077C4.73839 61.3021 3 65.4989 3 69.875V78.125"
+            stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M36 36.875C45.1127 36.875 52.5 29.4877 52.5 20.375C52.5 11.2623 45.1127 3.875 36 3.875C26.8873 3.875 19.5 11.2623 19.5 20.375C19.5 29.4877 26.8873 36.875 36 36.875Z"
+            stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-      </div> 
+      </div>
       <input type="text" name="" id="" value="Email or Phone number">
       <input type="text" name="" id="" value="Password">
       <div id="button-login">
@@ -497,11 +502,16 @@
         <path d="M1 1.5L18 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </div>
-    <div  class="signup">
-      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none" style="margin-bottom: 20px;margin-top: 38px;">
-        <circle cx="40" cy="40" r="40" fill="#FFF8FA"/>
-        <path d="M57.5999 60.3333V55.9333C57.5999 53.5994 56.6728 51.3611 55.0224 49.7108C53.3721 48.0604 51.1338 47.1333 48.7999 47.1333H31.1999C28.866 47.1333 26.6277 48.0604 24.9774 49.7108C23.327 51.3611 22.3999 53.5994 22.3999 55.9333V60.3333" stroke="#FFA8A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M40 38.3334C44.8601 38.3334 48.7999 34.3935 48.7999 29.5334C48.7999 24.6733 44.8601 20.7334 40 20.7334C35.1398 20.7334 31.2 24.6733 31.2 29.5334C31.2 34.3935 35.1398 38.3334 40 38.3334Z" stroke="#FFA8A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <div class="signup">
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none"
+        style="margin-bottom: 20px;margin-top: 38px;">
+        <circle cx="40" cy="40" r="40" fill="#FFF8FA" />
+        <path
+          d="M57.5999 60.3333V55.9333C57.5999 53.5994 56.6728 51.3611 55.0224 49.7108C53.3721 48.0604 51.1338 47.1333 48.7999 47.1333H31.1999C28.866 47.1333 26.6277 48.0604 24.9774 49.7108C23.327 51.3611 22.3999 53.5994 22.3999 55.9333V60.3333"
+          stroke="#FFA8A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M40 38.3334C44.8601 38.3334 48.7999 34.3935 48.7999 29.5334C48.7999 24.6733 44.8601 20.7334 40 20.7334C35.1398 20.7334 31.2 24.6733 31.2 29.5334C31.2 34.3935 35.1398 38.3334 40 38.3334Z"
+          stroke="#FFA8A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
       <input type="text" name="" id="" value="Full name">
       <input type="text" name="" id="" value="Email">
@@ -522,12 +532,16 @@
         <path d="M1 1.5L18 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </div>
-    <div  class="profile">
+    <div class="profile">
       <div id="profile-a">
         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="50" r="50" fill="#FFF8FA"/>
-          <path d="M72 75.4165V69.9165C72 66.9991 70.8411 64.2012 68.7782 62.1383C66.7153 60.0754 63.9174 58.9165 61 58.9165H39C36.0826 58.9165 33.2847 60.0754 31.2218 62.1383C29.1589 64.2012 28 66.9991 28 69.9165V75.4165" stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M50 47.9165C56.0751 47.9165 61 42.9916 61 36.9165C61 30.8414 56.0751 25.9165 50 25.9165C43.9249 25.9165 39 30.8414 39 36.9165C39 42.9916 43.9249 47.9165 50 47.9165Z" stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="50" cy="50" r="50" fill="#FFF8FA" />
+          <path
+            d="M72 75.4165V69.9165C72 66.9991 70.8411 64.2012 68.7782 62.1383C66.7153 60.0754 63.9174 58.9165 61 58.9165H39C36.0826 58.9165 33.2847 60.0754 31.2218 62.1383C29.1589 64.2012 28 66.9991 28 69.9165V75.4165"
+            stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M50 47.9165C56.0751 47.9165 61 42.9916 61 36.9165C61 30.8414 56.0751 25.9165 50 25.9165C43.9249 25.9165 39 30.8414 39 36.9165C39 42.9916 43.9249 47.9165 50 47.9165Z"
+            stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <p>Dao Thi Quynh Chi</p>
         <button onclick="openLogin()">Log out</button>
@@ -539,8 +553,12 @@
           <div class="profile-d">
             <p>Dao Thi Quynh Chi</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <path d="M5.47287 2.05444H1.99397C1.73035 2.05444 1.47753 2.15916 1.29113 2.34557C1.10472 2.53198 1 2.7848 1 3.04841V10.0062C1 10.2698 1.10472 10.5226 1.29113 10.7091C1.47753 10.8955 1.73035 11.0002 1.99397 11.0002H8.95176C9.21538 11.0002 9.4682 10.8955 9.65461 10.7091C9.84101 10.5226 9.94574 10.2698 9.94574 10.0062V6.52731" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M9.20052 1.30879C9.39824 1.11107 9.66639 1 9.946 1C10.2256 1 10.4938 1.11107 10.6915 1.30879C10.8892 1.5065 11.0003 1.77466 11.0003 2.05426C11.0003 2.33387 10.8892 2.60203 10.6915 2.79974L5.97012 7.5211L3.98218 8.01809L4.47916 6.03015L9.20052 1.30879Z" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path
+                d="M5.47287 2.05444H1.99397C1.73035 2.05444 1.47753 2.15916 1.29113 2.34557C1.10472 2.53198 1 2.7848 1 3.04841V10.0062C1 10.2698 1.10472 10.5226 1.29113 10.7091C1.47753 10.8955 1.73035 11.0002 1.99397 11.0002H8.95176C9.21538 11.0002 9.4682 10.8955 9.65461 10.7091C9.84101 10.5226 9.94574 10.2698 9.94574 10.0062V6.52731"
+                stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M9.20052 1.30879C9.39824 1.11107 9.66639 1 9.946 1C10.2256 1 10.4938 1.11107 10.6915 1.30879C10.8892 1.5065 11.0003 1.77466 11.0003 2.05426C11.0003 2.33387 10.8892 2.60203 10.6915 2.79974L5.97012 7.5211L3.98218 8.01809L4.47916 6.03015L9.20052 1.30879Z"
+                stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
         </div>
@@ -549,8 +567,12 @@
           <div class="profile-d">
             <p>+84 xxxx xxxx</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <path d="M5.47287 2.05444H1.99397C1.73035 2.05444 1.47753 2.15916 1.29113 2.34557C1.10472 2.53198 1 2.7848 1 3.04841V10.0062C1 10.2698 1.10472 10.5226 1.29113 10.7091C1.47753 10.8955 1.73035 11.0002 1.99397 11.0002H8.95176C9.21538 11.0002 9.4682 10.8955 9.65461 10.7091C9.84101 10.5226 9.94574 10.2698 9.94574 10.0062V6.52731" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M9.20052 1.30879C9.39824 1.11107 9.66639 1 9.946 1C10.2256 1 10.4938 1.11107 10.6915 1.30879C10.8892 1.5065 11.0003 1.77466 11.0003 2.05426C11.0003 2.33387 10.8892 2.60203 10.6915 2.79974L5.97012 7.5211L3.98218 8.01809L4.47916 6.03015L9.20052 1.30879Z" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path
+                d="M5.47287 2.05444H1.99397C1.73035 2.05444 1.47753 2.15916 1.29113 2.34557C1.10472 2.53198 1 2.7848 1 3.04841V10.0062C1 10.2698 1.10472 10.5226 1.29113 10.7091C1.47753 10.8955 1.73035 11.0002 1.99397 11.0002H8.95176C9.21538 11.0002 9.4682 10.8955 9.65461 10.7091C9.84101 10.5226 9.94574 10.2698 9.94574 10.0062V6.52731"
+                stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M9.20052 1.30879C9.39824 1.11107 9.66639 1 9.946 1C10.2256 1 10.4938 1.11107 10.6915 1.30879C10.8892 1.5065 11.0003 1.77466 11.0003 2.05426C11.0003 2.33387 10.8892 2.60203 10.6915 2.79974L5.97012 7.5211L3.98218 8.01809L4.47916 6.03015L9.20052 1.30879Z"
+                stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
         </div>
@@ -559,8 +581,12 @@
           <div class="profile-d">
             <p>18 21/50 Yen Xa, Tan Trieu, Thanh Liet,<br>Thanh Tri, Ha Noi, Viet Nam</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <path d="M5.47287 2.05444H1.99397C1.73035 2.05444 1.47753 2.15916 1.29113 2.34557C1.10472 2.53198 1 2.7848 1 3.04841V10.0062C1 10.2698 1.10472 10.5226 1.29113 10.7091C1.47753 10.8955 1.73035 11.0002 1.99397 11.0002H8.95176C9.21538 11.0002 9.4682 10.8955 9.65461 10.7091C9.84101 10.5226 9.94574 10.2698 9.94574 10.0062V6.52731" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M9.20052 1.30879C9.39824 1.11107 9.66639 1 9.946 1C10.2256 1 10.4938 1.11107 10.6915 1.30879C10.8892 1.5065 11.0003 1.77466 11.0003 2.05426C11.0003 2.33387 10.8892 2.60203 10.6915 2.79974L5.97012 7.5211L3.98218 8.01809L4.47916 6.03015L9.20052 1.30879Z" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path
+                d="M5.47287 2.05444H1.99397C1.73035 2.05444 1.47753 2.15916 1.29113 2.34557C1.10472 2.53198 1 2.7848 1 3.04841V10.0062C1 10.2698 1.10472 10.5226 1.29113 10.7091C1.47753 10.8955 1.73035 11.0002 1.99397 11.0002H8.95176C9.21538 11.0002 9.4682 10.8955 9.65461 10.7091C9.84101 10.5226 9.94574 10.2698 9.94574 10.0062V6.52731"
+                stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M9.20052 1.30879C9.39824 1.11107 9.66639 1 9.946 1C10.2256 1 10.4938 1.11107 10.6915 1.30879C10.8892 1.5065 11.0003 1.77466 11.0003 2.05426C11.0003 2.33387 10.8892 2.60203 10.6915 2.79974L5.97012 7.5211L3.98218 8.01809L4.47916 6.03015L9.20052 1.30879Z"
+                stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
         </div>
@@ -568,7 +594,116 @@
       </div>
     </div>
   </div>
-
+  <div class="thetienich" id="the-order">
+    <div class="name-tienich">
+      <p>Order statuses</p>
+      <svg onclick="an_the()" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none"
+        style="padding: 0px 0px 15px 0px;">
+        <path d="M18 1.5L1 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M1 1.5L18 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+    <div id="list-order">
+      <div class="order-info">
+        <div class="order-info-stt">
+          <p>1.</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="967" height="2" viewBox="0 0 967 2" fill="none">
+            <path d="M-0.0012207 0.770996L967.001 0.770996" stroke="#C0C0C0" stroke-width="0.5"/>
+          </svg>
+        </div>
+        <div class="order-info-date">
+          <div  class="order-info-date-1">
+            <p>Order date: 03/12/2023</p>
+            <button>Chi tiết đơn hàng
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                <path d="M1 1L5 5L1 9" stroke="#2D2D2D" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <p style="padding-left: 19px;">Total number of products: 2</p>
+        </div>
+        <div class="order-info-img">
+          <div class="order-info-img-1">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+              <path d="M52.4952 30.5034C50.4755 40.6019 42.8613 50.1106 32.1771 52.2353C26.9662 53.273 21.5608 52.6403 16.7305 50.4272C11.9002 48.2142 7.89117 44.5335 5.27436 39.9095C2.65754 35.2854 1.5663 29.9536 2.15601 24.6733C2.74573 19.3929 4.98634 14.4332 8.5588 10.5004C15.8862 2.42968 28.2589 0.20802 38.3573 4.2474" stroke="#FFA8A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.1604 26.4642L28.2588 36.5626L52.4951 10.3066" stroke="#FFA8A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p id="check">Ordered</p>
+          </div>
+          <svg class="daucham" xmlns="http://www.w3.org/2000/svg" width="152" height="3" viewBox="0 0 152 3" fill="none">
+            <path d="M1 1.5H151" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 8"/>
+          </svg>
+          <div class="order-info-img-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="55" viewBox="0 0 52 55" fill="none">
+              <path d="M49.6243 12.478L27.6243 0.433085C27.11 0.149005 26.5319 0 25.9443 0C25.3567 0 24.7787 0.149005 24.2643 0.433085L2.26434 12.478C1.71385 12.7792 1.25446 13.2228 0.934271 13.7625C0.614081 14.3021 0.444863 14.918 0.444336 15.5455V39.4553C0.444863 40.0828 0.614081 40.6986 0.934271 41.2382C1.25446 41.7779 1.71385 42.2215 2.26434 42.5227L24.2643 54.5676C24.7789 54.8513 25.3568 55 25.9443 55C26.5319 55 27.1098 54.8513 27.6243 54.5676L49.6243 42.5227C50.1748 42.2215 50.6342 41.7779 50.9544 41.2382C51.2746 40.6986 51.4438 40.0828 51.4443 39.4553V15.5455C51.4438 14.918 51.2746 14.3021 50.9544 13.7625C50.6342 13.2228 50.1748 12.7792 49.6243 12.478ZM25.6943 3.06306C25.7679 3.0228 25.8505 3.0017 25.9343 3.0017C26.0182 3.0017 26.1007 3.0228 26.1743 3.06306L47.0718 14.5005L38.5868 19.1429L17.4568 7.57802L25.6943 3.06306ZM24.4443 51.2502L3.69434 39.8927C3.61766 39.8485 3.55412 39.7847 3.51019 39.7078C3.46627 39.6309 3.44354 39.5438 3.44434 39.4553V17.1654L24.4443 28.6653V51.2502ZM4.81684 14.5005L14.3343 9.28801L35.4618 20.8529L25.9443 26.0604L4.81684 14.5005ZM48.4443 39.4553C48.4451 39.5438 48.4224 39.6309 48.3785 39.7078C48.3346 39.7847 48.271 39.8485 48.1943 39.8927L27.4443 51.2502V28.6603L36.4443 23.7329V33.5003C36.4443 33.8981 36.6024 34.2797 36.8837 34.561C37.165 34.8423 37.5465 35.0003 37.9443 35.0003C38.3422 35.0003 38.7237 34.8423 39.005 34.561C39.2863 34.2797 39.4443 33.8981 39.4443 33.5003V22.0929L48.4443 17.1654V39.4553Z" fill="#2D2D2D" fill-opacity="0.8"/>
+            </svg>
+            <p>Preparing</p>
+          </div>
+          <svg class="daucham" xmlns="http://www.w3.org/2000/svg" width="152" height="3" viewBox="0 0 152 3" fill="none">
+            <path d="M1 1.5H151" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 8"/>
+          </svg>
+          <div class="order-info-img-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="59" height="49" viewBox="0 0 59 49" fill="none">
+              <path d="M39.6062 2.20312H2.44434V34.4101H39.6062V2.20312Z" stroke="#2D2D2D" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M39.6062 14.5903H49.516L56.9484 22.0227V34.41H39.6062V14.5903Z" stroke="#2D2D2D" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.5929 46.7975C17.0136 46.7975 19.7866 44.0245 19.7866 40.6038C19.7866 37.1831 17.0136 34.4102 13.5929 34.4102C10.1723 34.4102 7.39929 37.1831 7.39929 40.6038C7.39929 44.0245 10.1723 46.7975 13.5929 46.7975Z" stroke="#2D2D2D" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M45.7999 46.7975C49.2205 46.7975 51.9935 44.0245 51.9935 40.6038C51.9935 37.1831 49.2205 34.4102 45.7999 34.4102C42.3792 34.4102 39.6062 37.1831 39.6062 40.6038C39.6062 44.0245 42.3792 46.7975 45.7999 46.7975Z" stroke="#2D2D2D" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Shipping</p>
+          </div>
+        </div>
+      </div>
+      <div class="order-info">
+        <div class="order-info-stt">
+          <p>2.</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="967" height="2" viewBox="0 0 967 2" fill="none">
+            <path d="M-0.0012207 0.770996L967.001 0.770996" stroke="#C0C0C0" stroke-width="0.5"/>
+          </svg>
+        </div>
+        <div class="order-info-date">
+          <div  class="order-info-date-1">
+            <p>Order date: 24/11/2023</p>
+            <button>Chi tiết đơn hàng
+              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                <path d="M1 1L5 5L1 9" stroke="#2D2D2D" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <p style="padding-left: 19px;">Total number of products: 1</p>
+        </div>
+        <div class="order-info-img">
+          <div class="order-info-img-1">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+              <path d="M52.4952 30.5034C50.4755 40.6019 42.8613 50.1106 32.1771 52.2353C26.9662 53.273 21.5608 52.6403 16.7305 50.4272C11.9002 48.2142 7.89117 44.5335 5.27436 39.9095C2.65754 35.2854 1.5663 29.9536 2.15601 24.6733C2.74573 19.3929 4.98634 14.4332 8.5588 10.5004C15.8862 2.42968 28.2589 0.20802 38.3573 4.2474" stroke="#FFA8A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.1604 26.4642L28.2588 36.5626L52.4951 10.3066" stroke="#FFA8A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p id="check">Ordered</p>
+          </div>
+          <svg class="daucham" xmlns="http://www.w3.org/2000/svg" width="152" height="3" viewBox="0 0 152 3" fill="none">
+            <path d="M1 1.5H151" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 8"/>
+          </svg>
+          <div class="order-info-img-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="55" viewBox="0 0 52 55" fill="none">
+              <path d="M49.6243 12.478L27.6243 0.433085C27.11 0.149005 26.5319 0 25.9443 0C25.3567 0 24.7787 0.149005 24.2643 0.433085L2.26434 12.478C1.71385 12.7792 1.25446 13.2228 0.934271 13.7625C0.614081 14.3021 0.444863 14.918 0.444336 15.5455V39.4553C0.444863 40.0828 0.614081 40.6986 0.934271 41.2382C1.25446 41.7779 1.71385 42.2215 2.26434 42.5227L24.2643 54.5676C24.7789 54.8513 25.3568 55 25.9443 55C26.5319 55 27.1098 54.8513 27.6243 54.5676L49.6243 42.5227C50.1748 42.2215 50.6342 41.7779 50.9544 41.2382C51.2746 40.6986 51.4438 40.0828 51.4443 39.4553V15.5455C51.4438 14.918 51.2746 14.3021 50.9544 13.7625C50.6342 13.2228 50.1748 12.7792 49.6243 12.478ZM25.6943 3.06306C25.7679 3.0228 25.8505 3.0017 25.9343 3.0017C26.0182 3.0017 26.1007 3.0228 26.1743 3.06306L47.0718 14.5005L38.5868 19.1429L17.4568 7.57802L25.6943 3.06306ZM24.4443 51.2502L3.69434 39.8927C3.61766 39.8485 3.55412 39.7847 3.51019 39.7078C3.46627 39.6309 3.44354 39.5438 3.44434 39.4553V17.1654L24.4443 28.6653V51.2502ZM4.81684 14.5005L14.3343 9.28801L35.4618 20.8529L25.9443 26.0604L4.81684 14.5005ZM48.4443 39.4553C48.4451 39.5438 48.4224 39.6309 48.3785 39.7078C48.3346 39.7847 48.271 39.8485 48.1943 39.8927L27.4443 51.2502V28.6603L36.4443 23.7329V33.5003C36.4443 33.8981 36.6024 34.2797 36.8837 34.561C37.165 34.8423 37.5465 35.0003 37.9443 35.0003C38.3422 35.0003 38.7237 34.8423 39.005 34.561C39.2863 34.2797 39.4443 33.8981 39.4443 33.5003V22.0929L48.4443 17.1654V39.4553Z" fill="#FFA8A1"/>
+            </svg>
+            <p id="check">Preparing</p>
+          </div>
+          <svg class="daucham" xmlns="http://www.w3.org/2000/svg" width="152" height="3" viewBox="0 0 152 3" fill="none">
+            <path d="M1 1.5H151" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 8"/>
+          </svg>
+          <div class="order-info-img-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="59" height="49" viewBox="0 0 59 49" fill="none">
+              <path d="M39.6062 2.20312H2.44434V34.4101H39.6062V2.20312Z" stroke="#2D2D2D" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M39.6062 14.5903H49.516L56.9484 22.0227V34.41H39.6062V14.5903Z" stroke="#2D2D2D" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.5929 46.7975C17.0136 46.7975 19.7866 44.0245 19.7866 40.6038C19.7866 37.1831 17.0136 34.4102 13.5929 34.4102C10.1723 34.4102 7.39929 37.1831 7.39929 40.6038C7.39929 44.0245 10.1723 46.7975 13.5929 46.7975Z" stroke="#2D2D2D" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M45.7999 46.7975C49.2205 46.7975 51.9935 44.0245 51.9935 40.6038C51.9935 37.1831 49.2205 34.4102 45.7999 34.4102C42.3792 34.4102 39.6062 37.1831 39.6062 40.6038C39.6062 44.0245 42.3792 46.7975 45.7999 46.7975Z" stroke="#2D2D2D" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Shipping</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="home.js"></script>
 
