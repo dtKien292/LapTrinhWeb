@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-montserrat: Montserrat;
+    --font-beautique-display: "Beautique Display";
+  
+    /* font sizes */
+    --font-size-xl: 20px;
+    --font-size-base: 16px;
+    --font-size-13xl: 32px;
+  
+    /* Colors */
+    --color-snow-100: #fff8fa;
+    --color-darkslategray-100: #2d2d2d;
+    --color-darkslategray-200: rgba(45, 45, 45, 0.8);
+    --color-darkslategray-300: rgba(45, 45, 45, 0.5);
+    --color-white: #fff;
+    --color-lightpink-100: #ffa8a1;
+  
+    /* Paddings */
+    --padding-2xl: 21px;
+  }
+  

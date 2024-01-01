@@ -1,7 +1,7 @@
-﻿create database baitaplon
+﻿create database btl
 go
 
-use baitaplon
+use btl
 go
 
 create table [user](
@@ -39,7 +39,7 @@ INSERT INTO sanpham VALUES
 ('SP001', N'Laptop Asus TUF GAMING F15 FX506HF-HN014W', N'15.6 inches IPS Panel, 144Hz', 'Intel Core i5-11400H (12MB Cache, up to 4.6GHz, 6 lõi / 12 luồng)', '8GB RAM', '512GB M.2 PCIE G3X2 1x khe M.2 SSD trống', N'NVIDIA GeForce RTX 2050 4GB', 'Windows 11 Home', '2.3 kg', '35.9 x 25.6 x 2.28 ~ 2.45 cm', N'Mỹ', 2021, 16890000.00,50, N'Gaming', 'ASUS ', '1.jpg', '1n.jpg', '1d.jpg'),
 ('SP002', N'Laptop ASUS ROG Flow X13 GV301RC-LJ050W', N'13.4 inches IPS Panel, 144Hz', 'AMD Ryzen 7 6800HS', '8GB RAM', '512GB M.2 2230 NVMe™ PCIe® 4.0 SSD', N'AMD Ryzen 7 6800HS', 'Windows 11 Home SL', '1.30 Kg', '29.9 x 22.2 x 1.58 ~ 1.58 cm', N'Mỹ', 2023, 29990000.00,50, N'Gaming', 'ASUS', '2.jpg', '2n.jpg', '2d.jpg'),
 ('SP003', N'Laptop Asus Gaming Rog Strix G15 G513IH HN015W', N'15.6 inches IPS Panel, 144Hz', 'AMD Ryzen 7 4800H', '8GB RAM', '512GB SSD NVMe M.2 PCIe Gen 3 x 4', N'Geforce GTX 1650 4GB', 'Windows 11 SL 64 Bit', '2.1 kg', '35.4 x 25.9 x 2.26 ~ 2.72 cm', N'Mỹ', 2021, 17890000.00,50, N'Gaming', 'ASUS', '3.jpg', '3n.jpg', '3d.jpg'),
-('SP004', N'Laptop Asus ROG Strix G16 G614JU-N3135W', N'16 inches Full HD', 'Intel Core i5-13450HX Gen 13', '8GB RAM', '512GB PCIe 4.0 NVMe M.2 SSD', N'NVIDIA GeForce RTX 4050 6GB GDDR6', 'Windows 11 Home', '2.50 kg', '35.4 x 26.4 x 2.26 ~ 3.04 cm', N'Mỹ', 2022, 33890000.00,50, N'Gaming', 'ASUS', '4.jpg', '4n.jpg', '4d.jpg'),
+('SP004', N'Laptop Asus ROG Strix G16 G614JU-N3135W', N'16 inches Full HD', 'Intel Core i5-13450HX Gen 13', '8GB RAM', '512GB PCIe 4.0 NVMe M.2 SSD', N'NVIDIA GeForce RTX 4050 6GB GDDR6', 'Windows 11 Home', '2.50 kg', '35.4 x 26.4 x 2.26 ~ 3.04 cm', N'Mỹ', 2022, 33890000.00,50, N'Gaming', 'ASUS', '4.jpg', '4n.jpg', '4d.jpg')
 ('SP005', N'Laptop Asus TUF Gaming A16 Advantage Edition FA617NS-N3486W', N'16 inches Full HD', 'AMD Ryzen 7-7735HS (8 lõi/16 luồng, 16MB L3 cache, up to 4.7 GHz max boost)', '8GB RAM', '512GB PCIe 4.0 NVMe M.2 SSD (2 khe cắm M.2 hỗ trợ SATA hoặc NVMe)', N'AMD Radeon RX 7600S 8GB GDDR6', 'Windows 11 Home', '2.20 Kg', '35.5 x 25.2 x 2.21 ~ 2.68 cm', N'Mỹ', 2021, 26490000.00,50, N'Gaming', 'ASUS', '5.jpg', '5n.jpg', '5d.jpg'),
 ('SP006', N'Laptop Asus TUF Gaming A15 FA507NU-LP034W', N'15.6 inches Full HD', 'AMD Ryzen 7 7735HS (8 lõi / 16 luồng, 16MB L3 cache, up to 4.7 GHz max boost)', '8GB RAM', '512GB PCIe 4.0 NVMe M.2 SSD (2230)', N'NVIDIA GeForce RTX 4050 6GB GDDR6 AMD Radeon Navi2 Graphics', 'Windows 11 Home', '2.20 kg', '35.4 x 25.1 x 2.24 ~ 2.49 cm', N'Mỹ', 2022, 24890000.00,50, N'Gaming', 'ASUS', '6.jpg', '6n.jpg', '6d.jpg'),
 ('SP007', N'Laptop Gaming Acer Nitro 5 Eagle AN515-57-5669 NH.QEHSV.001', N'15.6 inches Full HD', 'Intel Core i5-11400H', '8GB RAM', '512GB PCIe NVMe SSD cắm sẵn', N'NVIDIA GeForce GTX 1650 4 GB GDDR6', 'Windows 10', '2.2 kg', '363.4 (W) x 255 (D) x 23.9 (H) mm', N'Mỹ', 2023, 16190000.00,50, N'Laptop', 'Dell', '7.jpg', '7n.jpg', '7d.jpg'),
@@ -67,6 +67,88 @@ INSERT INTO sanpham VALUES
 ('SP028', N'Laptop ASUS ZenBook UM3402YA-KM074W', N'14 inches Full HD', 'AMD Ryzen 5 5625U Mobile', '8GB RAM ', '512GB M.2 NVMe™ PCIe® 3.0 SSD', N'AMD Radeon Graphics', 'Windows 11 Home SL', '1.39 kg', '31.36 x 22.06 x 1.69 ~ 1.69 cm', N'Mỹ', 2022, 17990,50, N'Văn phòng', 'ASUS', '28.jpg', '28n.jpg', '28d.jpg'), 
 ('SP029', N'Laptop Huawei Matebook D14', N'14 inches Full HD', 'Intel® Core™ i5-1240P', '16GB RAM ', 'SSD 512GB NVMe PCIe SSD', N' Intel® Iris® Xe Graphics', 'Windows 11 Home', '1.49 kg', '307.5 x 223.8 x 15.9 mm', N'Mỹ', 2022, 15290,50, N'Văn phòng', 'Huawei', '29.jpg', '29n.jpg', '29d.jpg'), 
 ('SP030', N'Laptop ASUS ZenBook UP5401ZA-KN005W', N'14 inches Full HD', 'Intel Core i5-12500H', '8GB RAM ', 'LPDDR5', N'Intel Iris Xe Graphics', 'Windows 11 Home SL', '1.40 kg', '31.10 x 22.30 x 1.59 ~ 1.59 cm', N'Mỹ', 2022, 19990,50, N'Văn phòng', 'ASUS', '30.jpg', '30n.jpg', '30d.jpg')
+
+INSERT INTO sanpham VALUES
+('SP031', N'Laptop ASUS ZenBook UM3402YA-KM074W', N'14 inches Full HD', 'AMD Ryzen 5 5625U Mobile', '8GB RAM', '512GB M.2 NVMe™ PCIe® 3.0 SSD', N'AMD Radeon Graphics', 'Windows 10', '1.39 kg', '31.36 x 22.06 x 1.69 ~ 1.69 cm', N'Mỹ', 2021, 17990,50, N'Văn phòng', 'ASUS', '31.jpg', '31n.jpg', '31d.jpg'), 
+
+('SP032', N'Laptop Asus ZenBook 14 OLED UX3402VA-KM085W', N'14 inches', 'Intel Core i5-1340P 1.9 GHz (12MB Cache, up to 4.6 GHz, 12 lõi / 16 luồng)', '16GB RAM', '512GB M.2 NVMe PCIe 4.0 SSD', N'Intel Iris Xe Graphics', 'Windows 11 Home
+', '1.39 kg', '31.36 x 22.06 x 1.69 ~ 1.69 cm', N'Mỹ', 2021, 23890,50, N'Văn phòng', 'Asus', '32.jpg', '32n.jpg', '32d.jpg'), 
+
+('SP033', N'Laptop Huawei Matebook D14
+', N' 14 inches
+', 'Intel® Core™ i5-1240P
+', '16GB RAM', 'SSD 512GB NVMe PCIe SSD
+', N' Intel® Iris® Xe Graphics
+', 'Windows 11 Home
+', '1.49 kg
+', '1.49 kg
+', N'Mỹ', 2021, 15990,50, N'Văn phòng', 'Huawei', '33.jpg', '33n.jpg', '33d.jpg'), 
+
+('SP034', N'Laptop ASUS ZenBook UP5401ZA-KN005W', N' 14 inches', 'Intel Core i5-12500H
+', '8GB RAM', 'LPDDR5
+', N' Intel Iris Xe Graphics
+', 'Windows 11 Home SL
+', '1.40 kg
+', '31.10 x 22.30 x 1.59 ~ 1.59 cm
+', N'Mỹ', 2023, 19990,50, N'Văn phòng', 'ASUS', '34.jpg', '34n.jpg', '34d.jpg'), 
+
+('SP035', N'Laptop Asus VivoBook X515KA-EJ135W
+', N' 15.6 inches
+', 'Intel Pentium Silver N6000 1.1 GHz (4M Cache, up to 3.3 GHz, 4 lõi)
+', '4GB RAM', '256GB M.2 NVMe PCIe 3.0 SSD
+', N' Intel UHD Graphics
+', 'Windows 11 Home
+', '1.80 kg
+', '36.02 x 23.49 x 1.99 ~ 1.99 cm (W x H x D)
+', N'Mỹ', 2021, 7290,50, N'Văn phòng', 'ASUS', '35.jpg', '35n.jpg', '35d.jpg'), 
+
+('SP036', N' Laptop MSI Modern 14 C12MO-660VN
+', N' 14 inches', 'Intel Core i5-1235U (10 lõi / 12 luồng, Up to 4.4GHz)
+', '16GB RAM', '512GB SSD M.2 PCIe NVMe Gen3 x4
+', N' Intel Iris Xe Graphics
+', 'Windows 11 Home
+', '1.4 kg
+', '319.9 x 223 x 19.35 mm
+', N'Mỹ', 2021, 13490,50, N'Văn phòng', 'MSI', '36.jpg', '36n.jpg', '36d.jpg'), 
+
+('SP037', N' 
+Laptop Lenovo Yoga Slim 7 14ACN6 82N7002MVN
+', N' 14 inches
+', 'AMD Ryzen 5 5600U
+', '8GB RAM', '512GB SSD M.2 2280 PCIe 3.0x4 NVMe
+', N' AMD Radeon Graphics
+', 'Windows 11 Home SL
+', '1.45kg
+', '320.4 x 214.6 x 15.68-17.7 mm
+', N'Mỹ', 2021, 20490,50, N'Văn phòng', 'Lenovo', '37.jpg', '37n.jpg', '37d.jpg'), 
+
+('SP038', N' Laptop Surface Pro 9
+', N' 13 inches
+', 'Intel Core i5-1245U Gen 12
+', '8GB RAM', '256 GB SSD
+', N' Intel Iris Xe graphics
+', 'Windows 11 Pro hoặc Windows 10 Pro
+', '879 g', '287 x 209 x 9.3 mm (Dài x Rộng x Cao)
+', N'Mỹ', 2023, 26490,50, N'Văn phòng', 'Surface', '38.jpg', '38n.jpg', '38d.jpg'), 
+
+('SP039', N' Laptop Lenovo IdeaPad 3 15ITL6 82H80388VN
+', N' 15.6 inches
+', 'Intel Core i5-1155G7 (2.5 / 4.5GHz, 8MB, 4 lõi / 8 luồng)
+', '8GB RAM', '256GB SSD M.2 2242 PCIe 3.0x4 NVMe
+', N' Intel Iris Xe Graphics
+', 'Windows 11 Home
+', '1.65 kg
+', '359.2 x 236.5 x 19.9 mm (W x D x H)
+', N'Mỹ', 2023, 11090,50, N'Văn phòng', 'Lenovo', '39.jpg', '39n.jpg', '39d.jpg'), 
+
+('SP040', N' Laptop Dell Vostro 3520
+', N' 15.6 inches
+', 'Intel Core i7-1255U (2.4Ghz,12MB cache, Up to 4,4Ghz Turbo )
+', '8GB RAM', '512GB , M.2 NVMe SSD
+', N' NVIDIA® Geforce ® MX550 2GB GDDR5
+', 'Windows 11', '1.66Kg', '16.96 mm x 358.50 mm x 235.56 mm
+', N'Mỹ', 2023, 17490,50, N'Văn phòng', 'Dell', '40.jpg', '40n.jpg', '40d.jpg')
+
 select * from sanpham;
 select * from sanpham where hang = 'dell';
 select TOP 3 id,tensp,giaban,soluong,img1 from sanpham ;

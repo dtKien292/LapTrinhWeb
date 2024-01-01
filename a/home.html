@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="Global.css">
+</head>
+
+<body>
+  <div id="header">
+    <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="149" height="50" viewBox="0 0 149 50" fill="none">
+      <path
+        d="M79.5263 49.3473H72.9131C74.8458 48.7873 74.9474 48.6857 74.9474 46.0915V34.0843C74.9474 29.607 73.5746 26.7576 69.4021 26.7576C66.1463 26.7576 64.5184 29.7605 63.8569 31.3884C63.9585 32.0996 64.0105 32.9644 64.0105 33.8811V46.0915C64.0105 48.8889 64.3152 48.8889 66.0967 49.3473H59.4835C61.4162 48.7873 61.5178 48.6857 61.5178 46.0915V34.0843C61.5178 29.607 60.1947 26.7576 55.9726 26.7576C52.7168 26.7576 51.1385 29.7086 50.4273 31.3365V46.0915C50.4273 48.8889 50.6825 48.8889 52.5136 49.3473H45.8484C47.7811 48.7873 47.8827 48.6857 47.8827 46.0915V29.2006C47.8827 27.4191 47.4763 26.656 45.3381 26.656L50.425 25.3848V30.5757C51.2897 27.7263 53.9359 25.3848 57.1397 25.3848C60.7003 25.3848 63.0418 26.9607 63.7529 30.8805C64.5681 27.9294 67.2119 25.3848 70.5197 25.3848C74.8434 25.3848 77.44 27.7759 77.44 33.8811V46.0915C77.44 48.8889 77.7472 48.8889 79.5263 49.3473Z"
+        fill="#FFA8A1" />
+      <path
+        d="M105.211 37.3424C105.211 43.8824 101.717 49.3236 94.0782 49.3236C86.4892 49.3236 82.9451 43.8824 82.9451 37.3424C82.9451 30.7529 86.4892 25.3612 94.0782 25.3612C101.717 25.3588 105.211 30.7505 105.211 37.3424ZM102.315 37.3424C102.315 28.3051 98.1207 25.8101 94.0782 25.8101C90.0356 25.8101 85.7898 28.3051 85.7898 37.3424C85.7898 46.3797 90.0332 48.8747 94.0782 48.8747C98.1207 48.8724 102.315 46.3774 102.315 37.3424Z"
+        fill="#FFA8A1" />
+      <path
+        d="M130.95 48.6243L126.957 49.274C125.859 49.5245 125.908 48.7259 125.908 48.7259V44.6313C125.36 47.0767 122.962 49.3236 119.368 49.3236C116.124 49.3236 111.43 48.3242 111.43 41.8859V30.1031C111.43 26.6583 111.43 26.6583 108.635 26.6583V26.6488L113.826 25.3588V41.7347C113.826 46.4766 117.02 48.0242 119.917 48.0242C123.461 48.0242 125.209 45.7772 125.908 43.5799V29.7511C125.908 26.7055 125.908 26.6559 123.562 26.6559V26.6465L128.406 25.3564V45.1251C128.406 47.5256 128.855 48.3738 130.95 48.6243Z"
+        fill="#FFA8A1" />
+      <path
+        d="M148.852 26.6819C149.259 27.7003 148.8 28.7682 147.785 29.2266C146.818 29.6329 145.649 29.1746 145.19 28.1586C145.037 27.7003 145.037 27.1923 145.19 26.7339C145.649 25.614 140.815 27.4971 139.491 31.2632V46.0679C139.491 48.8653 139.747 48.8653 141.578 49.3237H134.913C136.845 48.7637 136.947 48.6621 136.947 46.0679V29.1273C136.947 27.3459 136.54 26.6347 134.402 26.6347V26.637L139.489 25.3636V30.2473C140.557 27.601 144.271 25.0588 147.173 25.4132C147.886 25.5124 148.496 25.9708 148.852 26.6819Z"
+        fill="#FFA8A1" />
+      <path
+        d="M35.3793 49.2457C35.1785 49.3142 35.006 49.3355 34.8761 49.3496H42.2335C41.9783 49.3213 41.6664 49.2528 41.3357 49.1299C40.3481 48.7377 39.7976 47.9982 39.5684 47.639L23.0011 2.15242L22.7176 1.37273L22.2191 0L21.7158 1.37273L20.336 5.1554L12.7943 25.7746C10.3985 26.155 8.79898 26.7197 7.78538 27.1686C0.75872 30.2614 -1.91349 38.701 1.43445 46.3183L2.75284 49.3213L6.66546 49.3425C2.96075 49.0661 1.75105 46.1553 1.43445 45.4228C-1.02984 39.8256 0.274367 30.793 7.96258 27.412C8.92184 26.9914 10.434 26.4598 12.7376 26.0936H12.9242C13.0967 26.0936 13.2763 26.1007 13.4488 26.1007H13.5669C23.4973 26.1692 31.3296 35.1829 34.2003 41.8622L36.3055 47.639C36.3338 47.7288 36.4921 48.3644 36.1188 48.8133C35.9038 49.0732 35.566 49.1842 35.3793 49.2457ZM15.6083 25.7676C15.0011 25.692 14.3938 25.6494 13.7795 25.6376H13.6685L20.9361 5.66574L32.4047 37.0234C28.5629 31.2537 22.3656 26.5898 15.6083 25.7676Z"
+        fill="#FFA8A1" />
+    </svg>
+    <div id="chucnang">
+      <button class="cn-able" href="#">Home</button>
+      <button class="cn-disabled">About us</button>
+      <button class="cn-disabled">Shopping</button>
+    </div>
+    <svg id="search" xmlns="http://www.w3.org/2000/svg" width="240" height="30" viewBox="0 0 240 30" fill="none">
+      <rect x="0.5" y="0.5" width="239" height="29" rx="9.5" fill="white" stroke="#FFD1DA" />
+      <path
+        d="M222 22C226.418 22 230 18.4183 230 14C230 9.58172 226.418 6 222 6C217.582 6 214 9.58172 214 14C214 18.4183 217.582 22 222 22Z"
+        stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M232 24L227.65 19.65" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </div>
+
+  <div id="alo">
+    <svg id="cart-svg" xmlns="http://www.w3.org/2000/svg" width="34" height="33" viewBox="0 0 34 33" fill="none"
+      onclick="openCart()">
+      <path
+        d="M13.0476 31.0002C13.8103 31.0002 14.4285 30.3819 14.4285 29.6192C14.4285 28.8566 13.8103 28.2383 13.0476 28.2383C12.2849 28.2383 11.6666 28.8566 11.6666 29.6192C11.6666 30.3819 12.2849 31.0002 13.0476 31.0002Z"
+        stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <path
+        d="M28.2381 31.0002C29.0008 31.0002 29.6191 30.3819 29.6191 29.6192C29.6191 28.8566 29.0008 28.2383 28.2381 28.2383C27.4755 28.2383 26.8572 28.8566 26.8572 29.6192C26.8572 30.3819 27.4755 31.0002 28.2381 31.0002Z"
+        stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <path
+        d="M2 2H7.52381L11.2248 20.491C11.351 21.1267 11.6969 21.6978 12.2018 22.1043C12.7068 22.5108 13.3386 22.7267 13.9867 22.7143H27.4095C28.0576 22.7267 28.6894 22.5108 29.1943 22.1043C29.6993 21.6978 30.0451 21.1267 30.1714 20.491L32.381 8.90476H8.90476"
+        stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg id="order-svg" xmlns="http://www.w3.org/2000/svg" width="34" height="37" viewBox="0 0 34 37" fill="none">
+      <path
+        d="M7 2L2 8.66667V32C2 32.8841 2.35119 33.7319 2.97631 34.357C3.60143 34.9821 4.44928 35.3333 5.33333 35.3333H28.6667C29.5507 35.3333 30.3986 34.9821 31.0237 34.357C31.6488 33.7319 32 32.8841 32 32V8.66667L27 2H7Z"
+        stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M2 8.6665H32" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <path
+        d="M23.6667 15.3335C23.6667 17.1016 22.9643 18.7973 21.7141 20.0475C20.4638 21.2978 18.7682 22.0002 17 22.0002C15.2319 22.0002 13.5362 21.2978 12.286 20.0475C11.0358 18.7973 10.3334 17.1016 10.3334 15.3335"
+        stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg id="profile-svg" xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none"
+      onclick="openLogin()">
+      <path
+        d="M16.5001 18.601C21.0843 18.601 24.8005 14.8847 24.8005 10.3005C24.8005 5.71625 21.0843 2 16.5001 2C11.9158 2 8.19958 5.71625 8.19958 10.3005C8.19958 14.8847 11.9158 18.601 16.5001 18.601Z"
+        stroke="#2D2D2D" stroke-width="3" />
+      <path
+        d="M24.8005 21.9214H25.3848C26.5985 21.9217 27.7703 22.3652 28.68 23.1686C29.5897 23.9719 30.1748 25.0798 30.3253 26.2841L30.9744 31.4703C31.0328 31.9375 30.9911 32.4117 30.8522 32.8616C30.7133 33.3115 30.4802 33.7267 30.1686 34.0796C29.857 34.4325 29.4738 34.7151 29.0446 34.9087C28.6154 35.1022 28.1499 35.2023 27.6791 35.2022H5.32091C4.85008 35.2023 4.38461 35.1022 3.9554 34.9087C3.52618 34.7151 3.14304 34.4325 2.83139 34.0796C2.51975 33.7267 2.28674 33.3115 2.14781 32.8616C2.00889 32.4117 1.96724 31.9375 2.02562 31.4703L2.67306 26.2841C2.82363 25.0793 3.40917 23.9709 4.3196 23.1675C5.23002 22.3641 6.4026 21.9209 7.61683 21.9214H8.19952"
+        stroke="#2D2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </div>
+
+  <div id="button-to-top">
+    <a href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none">
+        <g filter="url(#filter0_d_63_162)">
+          <circle cx="55" cy="55" r="45" fill="white" />
+        </g>
+        <path d="M71.6667 54.3334L55 37.6667L38.3334 54.3334" stroke="#2D2D2D" stroke-width="3" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M71.6667 71.6667L55 55L38.3334 71.6667" stroke="#2D2D2D" stroke-width="3" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <defs>
+          <filter id="filter0_d_63_162" x="0" y="0" width="110" height="110" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha" />
+            <feOffset />
+            <feGaussianBlur stdDeviation="5" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_63_162" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_63_162" result="shape" />
+          </filter>
+        </defs>
+      </svg>
+    </a>
+  </div>
+
+  <div style="position: relative;height: 100px;width: 100%;"></div>
+  <div class="slide-show" style="overflow: hidden;">
+    <div class="list-images">
+      <img class="item" src="banner web/banner-01.jpg">
+      <img class="item" src="banner web/banner-02.jpg">
+      <img class="item" src="banner web/banner-03.jpg">
+      <img class="item" src="banner web/banner-04.jpg">
+    </div>
+  </div>
+
+  <div id="collections">
+    <p id="collections-1">Collections</p>
+    <div id="collections-2">
+      <img src="banner web/collection banner 1.png" alt=""
+        style="width: 362px;height: 180px;margin-right: 7px;margin-left: 206px;">
+      <img src="banner web/collection banner 2.png" alt="" style="width: 362px;height: 180px;margin-right: 7px;">
+      <img src="banner web/collection banner 3.png" alt="" style="width: 362px;height: 180px;margin-right: 7px;">
+    </div>
+  </div>
+
+  <div id="type">
+    <div id="type-name">
+      <button class="able">New</button>
+      <button class="disabled">Trending</button>
+      <button class="disabled">Dress</button>
+      <button class="disabled">Skirt</button>
+      <button class="disabled">Jewelry</button>
+    </div>
+    <div id="type-img">
+      <div id="type-img-1">
+        <img src="image/váy đen.png" alt="" style="height: 200px;width: 200px;margin: 0px;">
+        <div style="display: flex; flex-direction: row;">
+          <p class="type-img-name">Morticia Bell Sleeve Dress</p>
+          <p class="type-img-money">$34.55</p>
+        </div>
+      </div>
+      <div id="type-img-1">
+        <img src="image/váy đen (1).png" alt="" style="height: 200px;width: 200px;margin: 0px;">
+        <div style="display: flex; flex-direction: row;">
+          <p class="type-img-name">Morticia Bell Sleeve Dress</p>
+          <p class="type-img-money">$34.55</p>
+        </div>
+      </div>
+      <div id="type-img-1">
+        <img src="image/váy đen (2).png" alt="" style="height: 200px;width: 200px;margin: 0px;">
+        <div style="display: flex; flex-direction: row;">
+          <p class="type-img-name">Morticia Bell Sleeve Dress</p>
+          <p class="type-img-money">$34.55</p>
+        </div>
+      </div>
+    </div>
+    <button style="margin-left: 82px;background-color:rgba(255, 255, 255, 0);border: none;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <path d="M18.3333 34.3333L35 17.6667L18.3333 1" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M1 34.3333L17.6667 17.6667L1 1" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+  </div>
+
+
+  <div id="banner-05" style="overflow: hidden;">
+    <div class="slide-banner5">
+      <div class="buy-now" style="width: 1100px;height: 450px;">
+        <button id="click" onclick="reloadSliderBanner5()"></button>
+      </div>
+      <div class="buy-now" id="buy-now-1">
+        <div id="buynow">
+          <div id="section-1">
+            <button class="section-1-able">Buy now</button>
+            <button class="section-1-disabled">As a gift</button>
+          </div>
+          <div id="section-2">
+            <p>Information</p>
+            <input type="text" value="Name">
+            <input type="text" value="Phone number">
+            <input type="text" value="Address">
+          </div>
+          <div id="section-3">
+            <div class="section-3-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                <circle cx="7.5" cy="7.5" r="6.75" stroke="#FFA8A1" stroke-width="1.5" />
+              </svg>
+              <p>Size S</p>
+            </div>
+            <div class="section-3-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                <circle cx="7.5" cy="7.5" r="6.75" stroke="#FFA8A1" stroke-width="1.5" />
+              </svg>
+              <p>Size M</p>
+            </div>
+            <div class="section-3-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                <circle cx="7.5" cy="7.5" r="6.75" stroke="#FFA8A1" stroke-width="1.5" />
+              </svg>
+              <p>Size L</p>
+            </div>
+            <div class="section-3-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                <circle cx="7.5" cy="7.5" r="6.75" stroke="#FFA8A1" stroke-width="1.5" />
+              </svg>
+              <p>Size XL</p>
+            </div>
+          </div>
+          <div id="section-4">
+            <button id="cancel" onclick="reloadSliderBanner5()">Cancel</button>
+            <button id="buy" onclick="actionBuy()">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img src="banner web/banner-03.jpg" alt="" style="margin-top:40px ;margin-bottom: 64px;width: 100%;height: auto;">
+
+  <div class="footer">
+    <div class="group-container">
+      <div class="group-item">
+        <img class="group-item" alt="" src="banner web/Group-34.png" style="width: 36.667px;height: 30px;" />
+        <p>Free Shipping</p>
+      </div>
+      <div class="group-item">
+        <img class="group-inner" alt="" src="banner web/Group-35.png" style="width: 30px;height: 30px;" />
+        <p class="in-a-world">Easy returns &</p>
+        <p class="in-a-world">exchanges</p>
+      </div>
+      <div class="group-item">
+        <img class="group-child1" alt="" src="banner web/Group-36.png" style="width: 29.985px;height: 30px;" />
+        <p class="in-a-world">Quality & safe</p>
+        <p class="in-a-world">materials</p>
+      </div>
+      <div class="group-item">
+        <img class="vector-icon" alt="" src="banner web/Star.png" style="width: 31px;height: 30px;" />
+        <p class="in-a-world">Handcrafted</p>
+        <p class="in-a-world">garments</p>
+      </div>
+    </div>
+    <div class="footer-1">
+      <div class="helpful-links-parent">
+        <div class="helpful-links">Helpful Links</div>
+        <div class="about-us-parent">
+          <div class="xxx-xx-xxx">About us</div>
+          <div class="xxx-xx-xxx">Delivery and Returns Policy</div>
+          <div class="xxx-xx-xxx">Help & FAQ</div>
+          <div class="xxx-xx-xxx">
+            Service for professionals
+          </div>
+        </div>
+      </div>
+      <div class="helpful-links-parent" style="margin-left: 50px;">
+        <div class="helpful-links">Contact Info</div>
+        <div class="xxx-xx-xxx-parent">
+          <div class="xxx-xx-xxx">+84 xxx xx xxx</div>
+          <div class="xxx-xx-xxx">@amour.co@gmail.com</div>
+          <div class="xxx-xx-xxx" style="margin-top: 20px;">
+            <img class="group-child2" alt="" src="banner web/Group-22.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="shadow"
+    style=" position:fixed ;top: 0px;left: 0px;width: 100%;height: 100%;z-index: -50;background-color: #FFF;"></div>
+
+  <div class="thetienich" id="the-cart">
+    <div class="name-tienich">
+      <p>Cart</p>
+      <svg onclick="an_the()" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none"
+        style="padding: 0px 0px 15px 0px;">
+        <path d="M18 1.5L1 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M1 1.5L18 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+    <div class="body-cast">
+      <div class="list-cast">
+        <div class="list-cast-1">
+          <div>
+            <img src="image/váy đen.png" alt="" style="height: 120px;width: 120px;">
+          </div>
+          <div class="thongtin">
+            <p class="thongtin-name">Date night silk dress</p>
+            <p class="thongtin-sp">Size: M</p>
+            <p class="thongtin-sp">Color: White</p>
+            <p class="thongtin-sp">Quantity: 1</p>
+            <div class="thongtin-money">
+              <p>$55.88</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <circle cx="12.5" cy="12.5" r="11" stroke="#FFA8A1" stroke-width="3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="list-cast-1">
+          <div>
+            <img src="image/váy đen.png" alt="" style="height: 120px;width: 120px;">
+          </div>
+          <div class="thongtin">
+            <p class="thongtin-name">Date night silk dress</p>
+            <p class="thongtin-sp">Size: M</p>
+            <p class="thongtin-sp">Color: White</p>
+            <p class="thongtin-sp">Quantity: 1</p>
+            <div class="thongtin-money">
+              <p>$55.88</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <circle cx="12.5" cy="12.5" r="11" stroke="#FFA8A1" stroke-width="3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="list-cast-1">
+          <div>
+            <img src="image/váy đen.png" alt="" style="height: 120px;width: 120px;">
+          </div>
+          <div class="thongtin">
+            <p class="thongtin-name">Date night silk dress</p>
+            <p class="thongtin-sp">Size: M</p>
+            <p class="thongtin-sp">Color: White</p>
+            <p class="thongtin-sp">Quantity: 1</p>
+            <div class="thongtin-money">
+              <p>$55.88</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <circle cx="12.5" cy="12.5" r="11" stroke="#FFA8A1" stroke-width="3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="list-cast-1">
+          <div>
+            <img src="image/váy đen.png" alt="" style="height: 120px;width: 120px;">
+          </div>
+          <div class="thongtin">
+            <p class="thongtin-name">Date night silk dress</p>
+            <p class="thongtin-sp">Size: M</p>
+            <p class="thongtin-sp">Color: White</p>
+            <p class="thongtin-sp">Quantity: 1</p>
+            <div class="thongtin-money">
+              <p>$55.88</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <circle cx="12.5" cy="12.5" r="11" stroke="#FFA8A1" stroke-width="3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="list-cast-1">
+          <div>
+            <img src="image/váy đen.png" alt="" style="height: 120px;width: 120px;">
+          </div>
+          <div class="thongtin">
+            <p class="thongtin-name">Date night silk dress</p>
+            <p class="thongtin-sp">Size: M</p>
+            <p class="thongtin-sp">Color: White</p>
+            <p class="thongtin-sp">Quantity: 1</p>
+            <div class="thongtin-money">
+              <p>$55.88</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <circle cx="12.5" cy="12.5" r="11" stroke="#FFA8A1" stroke-width="3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="list-cast-1">
+          <div>
+            <img src="image/váy đen.png" alt="" style="height: 120px;width: 120px;">
+          </div>
+          <div class="thongtin">
+            <p class="thongtin-name">Date night silk dress</p>
+            <p class="thongtin-sp">Size: M</p>
+            <p class="thongtin-sp">Color: White</p>
+            <p class="thongtin-sp">Quantity: 1</p>
+            <div class="thongtin-money">
+              <p>$55.88</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <circle cx="12.5" cy="12.5" r="11" stroke="#FFA8A1" stroke-width="3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="list-cast-1">
+          <div>
+            <img src="image/váy đen.png" alt="" style="height: 120px;width: 120px;">
+          </div>
+          <div class="thongtin">
+            <p class="thongtin-name">Date night silk dress</p>
+            <p class="thongtin-sp">Size: M</p>
+            <p class="thongtin-sp">Color: White</p>
+            <p class="thongtin-sp">Quantity: 1</p>
+            <div class="thongtin-money">
+              <p>$55.88</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <circle cx="12.5" cy="12.5" r="11" stroke="#FFA8A1" stroke-width="3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="list-cast-1">
+          <div>
+            <img src="image/váy đen.png" alt="" style="height: 120px;width: 120px;">
+          </div>
+          <div class="thongtin">
+            <p class="thongtin-name">Date night silk dress</p>
+            <p class="thongtin-sp">Size: M</p>
+            <p class="thongtin-sp">Color: White</p>
+            <p class="thongtin-sp">Quantity: 1</p>
+            <div class="thongtin-money">
+              <p>$55.88</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <circle cx="12.5" cy="12.5" r="11" stroke="#FFA8A1" stroke-width="3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="check-list">
+        <div id="check-list-1">
+          <p id="aaa">Checklist</p>
+          <div class="check-list-2">
+            <p class="stt">1</p>
+            <div class="check-list-3">
+              <p class="name-sp">Date night silk dress, M, White, 1</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                style="margin-left: 5px;">
+                <path d="M9 1L1 9" stroke="#E1E1E1" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1 1L9 9" stroke="#E1E1E1" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="check-list-2">
+            <p class="stt">2</p>
+            <div class="check-list-3">
+              <p class="name-sp">Date night silk dress, M, White, 1</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                style="margin-left: 5px;">
+                <path d="M9 1L1 9" stroke="#E1E1E1" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1 1L9 9" stroke="#E1E1E1" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="check-list-2">
+            <p class="stt">3</p>
+            <div class="check-list-3">
+              <p class="name-sp">Date night silk dress, M, White, 1</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                style="margin-left: 5px;">
+                <path d="M9 1L1 9" stroke="#E1E1E1" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1 1L9 9" stroke="#E1E1E1" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div id="total">
+          <div id="total-1">
+            <p id="total-2">Total</p>
+            <p id="total-3">$111.76</p>
+          </div>
+          <button id="orderB">Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="thetienich" id="the-login">
+    <div class="name-tienich">
+      <p>Profile</p>
+      <svg onclick="an_the()" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none"
+        style="padding: 0px 0px 15px 0px;">
+        <path d="M18 1.5L1 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M1 1.5L18 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+    <div  class="login">
+      <div id="avt">
+        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="82" viewBox="0 0 72 82" fill="none">
+          <path d="M69 78.125V69.875C69 65.4989 67.2616 61.3021 64.1673 58.2077C61.0729 55.1134 56.8761 53.375 52.5 53.375H19.5C15.1239 53.375 10.9271 55.1134 7.83274 58.2077C4.73839 61.3021 3 65.4989 3 69.875V78.125" stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M36 36.875C45.1127 36.875 52.5 29.4877 52.5 20.375C52.5 11.2623 45.1127 3.875 36 3.875C26.8873 3.875 19.5 11.2623 19.5 20.375C19.5 29.4877 26.8873 36.875 36 36.875Z" stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div> 
+      <input type="text" name="" id="" value="Email or Phone number">
+      <input type="text" name="" id="" value="Password">
+      <div id="button-login">
+        <button id="sign_up" onclick="openSignUp()">Sign up</button>
+        <button id="show-profile" onclick="openProfile()">Login</button>
+      </div>
+    </div>
+  </div>
+  <div class="thetienich" id="the-signup">
+    <div class="name-tienich">
+      <p>Profile</p>
+      <svg onclick="an_the()" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none"
+        style="padding: 0px 0px 15px 0px;">
+        <path d="M18 1.5L1 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M1 1.5L18 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+    <div  class="signup">
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none" style="margin-bottom: 20px;margin-top: 38px;">
+        <circle cx="40" cy="40" r="40" fill="#FFF8FA"/>
+        <path d="M57.5999 60.3333V55.9333C57.5999 53.5994 56.6728 51.3611 55.0224 49.7108C53.3721 48.0604 51.1338 47.1333 48.7999 47.1333H31.1999C28.866 47.1333 26.6277 48.0604 24.9774 49.7108C23.327 51.3611 22.3999 53.5994 22.3999 55.9333V60.3333" stroke="#FFA8A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M40 38.3334C44.8601 38.3334 48.7999 34.3935 48.7999 29.5334C48.7999 24.6733 44.8601 20.7334 40 20.7334C35.1398 20.7334 31.2 24.6733 31.2 29.5334C31.2 34.3935 35.1398 38.3334 40 38.3334Z" stroke="#FFA8A1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <input type="text" name="" id="" value="Full name">
+      <input type="text" name="" id="" value="Email">
+      <input type="text" name="" id="" value="Phone number">
+      <input type="text" name="" id="" value="Address">
+      <div id="button-login">
+        <button id="sign_up" onclick="openLogin()">Login</button>
+        <button id="show-profile" onclick="openProfile()">Sign up</button>
+      </div>
+    </div>
+  </div>
+  <div class="thetienich" id="the-profile">
+    <div class="name-tienich">
+      <p>Profile</p>
+      <svg onclick="an_the()" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none"
+        style="padding: 0px 0px 15px 0px;">
+        <path d="M18 1.5L1 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M1 1.5L18 18.5" stroke="#FFA8A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+    <div  class="profile">
+      <div id="profile-a">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="50" fill="#FFF8FA"/>
+          <path d="M72 75.4165V69.9165C72 66.9991 70.8411 64.2012 68.7782 62.1383C66.7153 60.0754 63.9174 58.9165 61 58.9165H39C36.0826 58.9165 33.2847 60.0754 31.2218 62.1383C29.1589 64.2012 28 66.9991 28 69.9165V75.4165" stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M50 47.9165C56.0751 47.9165 61 42.9916 61 36.9165C61 30.8414 56.0751 25.9165 50 25.9165C43.9249 25.9165 39 30.8414 39 36.9165C39 42.9916 43.9249 47.9165 50 47.9165Z" stroke="#FFA8A1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p>Dao Thi Quynh Chi</p>
+        <button onclick="openLogin()">Log out</button>
+      </div>
+      <div id="profile-b">
+        <h1>Your information</h1>
+        <div class="profile-c">
+          <p>Full name:</p>
+          <div class="profile-d">
+            <p>Dao Thi Quynh Chi</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M5.47287 2.05444H1.99397C1.73035 2.05444 1.47753 2.15916 1.29113 2.34557C1.10472 2.53198 1 2.7848 1 3.04841V10.0062C1 10.2698 1.10472 10.5226 1.29113 10.7091C1.47753 10.8955 1.73035 11.0002 1.99397 11.0002H8.95176C9.21538 11.0002 9.4682 10.8955 9.65461 10.7091C9.84101 10.5226 9.94574 10.2698 9.94574 10.0062V6.52731" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.20052 1.30879C9.39824 1.11107 9.66639 1 9.946 1C10.2256 1 10.4938 1.11107 10.6915 1.30879C10.8892 1.5065 11.0003 1.77466 11.0003 2.05426C11.0003 2.33387 10.8892 2.60203 10.6915 2.79974L5.97012 7.5211L3.98218 8.01809L4.47916 6.03015L9.20052 1.30879Z" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="profile-c">
+          <p>Phone number:</p>
+          <div class="profile-d">
+            <p>+84 xxxx xxxx</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M5.47287 2.05444H1.99397C1.73035 2.05444 1.47753 2.15916 1.29113 2.34557C1.10472 2.53198 1 2.7848 1 3.04841V10.0062C1 10.2698 1.10472 10.5226 1.29113 10.7091C1.47753 10.8955 1.73035 11.0002 1.99397 11.0002H8.95176C9.21538 11.0002 9.4682 10.8955 9.65461 10.7091C9.84101 10.5226 9.94574 10.2698 9.94574 10.0062V6.52731" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.20052 1.30879C9.39824 1.11107 9.66639 1 9.946 1C10.2256 1 10.4938 1.11107 10.6915 1.30879C10.8892 1.5065 11.0003 1.77466 11.0003 2.05426C11.0003 2.33387 10.8892 2.60203 10.6915 2.79974L5.97012 7.5211L3.98218 8.01809L4.47916 6.03015L9.20052 1.30879Z" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="profile-c">
+          <p>Address:</p>
+          <div class="profile-d">
+            <p>18 21/50 Yen Xa, Tan Trieu, Thanh Liet,<br>Thanh Tri, Ha Noi, Viet Nam</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M5.47287 2.05444H1.99397C1.73035 2.05444 1.47753 2.15916 1.29113 2.34557C1.10472 2.53198 1 2.7848 1 3.04841V10.0062C1 10.2698 1.10472 10.5226 1.29113 10.7091C1.47753 10.8955 1.73035 11.0002 1.99397 11.0002H8.95176C9.21538 11.0002 9.4682 10.8955 9.65461 10.7091C9.84101 10.5226 9.94574 10.2698 9.94574 10.0062V6.52731" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.20052 1.30879C9.39824 1.11107 9.66639 1 9.946 1C10.2256 1 10.4938 1.11107 10.6915 1.30879C10.8892 1.5065 11.0003 1.77466 11.0003 2.05426C11.0003 2.33387 10.8892 2.60203 10.6915 2.79974L5.97012 7.5211L3.98218 8.01809L4.47916 6.03015L9.20052 1.30879Z" stroke="#FFA8A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <h1 style="margin-top: 20px;">Great! You are our VIP customer!</h1>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="home.js"></script>
+
+</html>

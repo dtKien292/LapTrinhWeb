@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --font-1: 'Roboto', sans-serif;
+    --color-1: #F94F2F;
+    --color-2: #2b80dd;
+    --color-3: #EC3237;
+}
+.background-color{
+    background-color: #F5F5F5;
+}
+body{
+    font-family: var(--font-1);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.slick-arrow-square{
+    position: relative;
+}
+.slick-arrow-square .slick-arrow{
+    background: rgba(0, 0, 0, 0.367);
+    border: 0;
+    position: absolute;
+    top: 50%;
+    color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    z-index: 1;
+}
+.slick-arrow-square .slick-arrow::before{
+    content: "\f053";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    color: #FFF;
+    font-size: 24px;
+}
+.slick-arrow-square .slick-arrow:hover{
+    background-color: var(--color-2l);
+}
+
+.slick-arrow-square .slick-prev{
+    left: 0;
+}
+.slick-arrow-square .slick-next{
+    right: 0;
+}
+.slick-arrow-square .slick-arrow.slick-next::before{
+    content: "\f105";
+}
+
+
